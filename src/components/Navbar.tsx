@@ -30,12 +30,16 @@ export default function Navbar() {
 
       {/* Desktop Nav */}
       <div className="hidden lg:flex items-center gap-0.5 flex-1">
-        <button className="px-3 py-1.5 text-[13px] text-gray-400 hover:bg-gray-100 rounded-md transition-colors">
-          Work
-        </button>
-        <button className="px-3 py-1.5 text-[13px] text-gray-400 hover:bg-gray-100 rounded-md transition-colors">
-          About
-        </button>
+        <Link href="/case-studies">
+          <button className="px-3 py-1.5 text-[13px] text-gray-400 hover:bg-gray-100 rounded-md transition-colors">
+            Work
+          </button>
+        </Link>
+        <Link href="/about">
+          <button className="px-3 py-1.5 text-[13px] text-gray-400 hover:bg-gray-100 rounded-md transition-colors">
+            About
+          </button>
+        </Link>
         <button className="px-3 py-1.5 text-[13px] text-gray-400 hover:bg-gray-100 rounded-md transition-colors">
           Skills
         </button>
@@ -88,12 +92,16 @@ export default function Navbar() {
             className="absolute top-14 left-0 right-0 bg-white border-b border-gray-200 shadow-lg lg:hidden"
           >
             <div className="flex flex-col p-4 gap-2">
-              <button className="px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md text-left">
-                Work
-              </button>
-              <button className="px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md text-left">
-                About
-              </button>
+              <Link href="/case-studies">
+                <button className="px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md text-left w-full text-left">
+                  Work
+                </button>
+              </Link>
+              <Link href="/about">
+                <button className="px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md text-left w-full text-left">
+                  About
+                </button>
+              </Link>
               <button className="px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md text-left">
                 Skills
               </button>
