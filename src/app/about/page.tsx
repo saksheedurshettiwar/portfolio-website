@@ -60,6 +60,12 @@ export default function About() {
             Today, I work with clients across India and abroad — helping startups and brands craft purposeful, conversion-driven, and visually consistent experiences. I love building things that look good, work well, and make sense.
           </p>
         </AnimatedSection>
+        
+        <AnimatedSection delay={0.4}>
+          <p className="text-base md:text-lg text-gray-500 leading-relaxed max-w-4xl mt-8">
+            Beyond work, I&apos;m a traveler at heart. Exploring new places gives me fresh perspectives and endless inspiration. I also write blogs about design and creativity — a space where I reflect, share, and connect ideas that go beyond the screen.
+          </p>
+        </AnimatedSection>
       </section>
     </div>
   );
