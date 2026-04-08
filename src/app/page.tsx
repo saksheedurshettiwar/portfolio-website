@@ -250,32 +250,6 @@ export default function Home() {
         </motion.div>
       </section>
 
-      {/* ABOUT */}
-      <section className="max-w-6xl mx-auto px-4 md:px-8 py-16 md:py-24">
-        <AnimatedSection>
-          <span className="inline-flex items-center gap-1.5 text-[11px] font-medium text-gray-400 border border-gray-200 px-3 py-1 rounded-full mb-4 md:mb-6">
-            About
-          </span>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-gray-900 mb-4 md:mb-5">
-            B.Tech → PGDM<br />
-            <span className="text-gray-400">→ Product Designer.</span>
-          </h2>
-          <p className="text-base text-gray-500 max-w-2xl leading-relaxed mb-8">
-            Started in textile engineering, discovered product design along the way, and
-            never looked back. I&apos;ve shipped alongside founding teams at Hivel and
-            Dentread — platforms now used by tens of thousands. AI is central to how I
-            work, from research to prototyping. Comfortable without a playbook.
-          </p>
-          <motion.button 
-            className="px-5 py-2.5 bg-white border border-gray-200 text-gray-600 text-sm rounded-lg"
-            whileHover={{ scale: 1.02, y: -2, borderColor: "#9CA3AF" }}
-            whileTap={{ scale: 0.98 }}
-          >
-            Read my story <span className="text-gray-300 ml-1">→</span>
-          </motion.button>
-        </AnimatedSection>
-      </section>
-
       {/* WORK */}
       <section className="max-w-6xl mx-auto px-4 md:px-8 pb-16 md:pb-24">
         <AnimatedSection>
