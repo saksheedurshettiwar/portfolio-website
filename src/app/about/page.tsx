@@ -23,48 +23,27 @@ function AnimatedSection({ children, className = "", delay = 0 }: { children: Re
   );
 }
 
-const tools = [
-  { name: "Figma", color: "#F24E1E" },
-  { name: "Claude", color: "#D4A574" },
-  { name: "Cursor", color: "#000000" },
-  { name: "Framer", color: "#0055FF" },
-  { name: "Jitter", color: "#FFD02F" },
-  { name: "Notion", color: "#000000" },
-  { name: "Jira", color: "#2684FF" },
-  { name: "OpenCode", color: "#7C3AED" },
-];
+const tools = ["Figma", "Claude", "Cursor", "Framer", "Jitter", "Notion", "Jira", "OpenCode"];
 
 function ToolsChips() {
   return (
-    <div className="mt-4 relative h-40">
-      {tools.map((tool, i) => (
-        <motion.div
-          key={tool.name}
-          className="absolute flex items-center gap-3"
-          initial={{ x: -20, opacity: 0 }}
-          animate={{ 
-            x: 0, 
-            opacity: 1,
-            y: [0, -8, 0]
-          }}
-          transition={{ 
-            x: { delay: i * 0.1, duration: 0.5 },
-            opacity: { delay: i * 0.1, duration: 0.5 },
-            y: { 
-              duration: 2, 
-              delay: i * 0.2,
-              repeat: Infinity,
-              ease: "easeInOut"
-            }
-          }}
-        >
-          <div 
-            className="w-2 h-2 rounded-full"
-            style={{ backgroundColor: tool.color }}
-          />
-          <span className="text-sm font-medium text-gray-700">{tool.name}</span>
-        </motion.div>
-      ))}
+    <div className="mt-4">
+      <motion.div
+        className="text-2xl md:text-3xl font-bold text-gray-200 leading-tight"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+      >
+        {tools.join(" • ")}
+      </motion.div>
+      <motion.div
+        className="text-2xl md:text-3xl font-bold text-gray-300 leading-tight mt-1"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1, delay: 0.5 }}
+      >
+        {tools.slice(0, 4).join(" • ")}
+      </motion.div>
     </div>
   );
 }
