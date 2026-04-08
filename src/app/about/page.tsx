@@ -27,25 +27,21 @@ const tools = ["Figma", "Claude", "Cursor", "Framer", "Jitter", "Notion", "Jira"
 
 function ToolsChips() {
   return (
-    <div className="mt-4 relative h-16 overflow-hidden">
-      {[0, 1, 2].map((row) => (
-        <motion.div
-          key={row}
-          className="absolute w-full text-2xl md:text-3xl font-bold text-gray-200 leading-tight whitespace-nowrap"
-          style={{ top: `${row * 32}px` }}
-          animate={{ 
-            y: [-64, 0],
-            opacity: [0, 1, 1, 0],
-          }}
+    <div className="mt-4 flex flex-wrap gap-3">
+      {tools.map((tool, i) => (
+        <motion.span
+          key={tool}
+          className="text-sm font-medium text-gray-500"
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ 
-            duration: 4,
-            repeat: Infinity,
-            delay: row * 1.3,
-            ease: "linear"
+            duration: 0.4,
+            delay: i * 0.1
           }}
+          whileHover={{ color: "#111" }}
         >
-          {tools.join(" • ")}
-        </motion.div>
+          {tool}
+        </motion.span>
       ))}
     </div>
   );
