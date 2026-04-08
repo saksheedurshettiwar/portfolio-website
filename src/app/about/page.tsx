@@ -32,15 +32,18 @@ function ToolsChips() {
         <motion.span
           key={tool}
           className="px-4 py-2 bg-gray-100 text-gray-700 rounded-full text-sm font-medium"
-          animate={{ 
-            y: [0, -3, 0],
-            scale: [1, 1.02, 1]
-          }}
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
           transition={{ 
-            duration: 3,
-            delay: i * 0.15,
+            duration: 0.4,
+            delay: i * 0.1,
             repeat: Infinity,
-            ease: "easeInOut"
+            repeatDelay: 4,
+          }}
+          whileHover={{ 
+            backgroundColor: "#111",
+            color: "#fff",
+            scale: 1.05
           }}
         >
           {tool}
