@@ -200,14 +200,14 @@ export default function About() {
                 />
               </motion.div>
 
-              {/* Card 6 - Experience */}
+              {/* Card 6 - Sectors */}
               <motion.div 
                 className="bg-white border border-gray-200 rounded-2xl h-[395px] flex flex-col items-center justify-center"
                 whileHover={{ y: -8, scale: 1.02, boxShadow: "0 25px 50px rgba(0,0,0,0.1)" }}
                 transition={{ duration: 0.3 }}
               >
-                <p className="text-6xl font-bold text-gray-900">5+</p>
-                <p className="text-base text-gray-500 mt-4">Years of experience</p>
+                <p className="text-6xl font-bold text-gray-900">6+</p>
+                <p className="text-base text-gray-500 mt-4">Sectors Navigated</p>
               </motion.div>
             </div>
           </div>
