@@ -173,9 +173,12 @@ export default function About() {
                   </div>
                   <div className="absolute bottom-0 left-14 group" style={{ animation: "drop2 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) 0.15s forwards" }}>
                     <div className="w-12 h-12 bg-gradient-to-br from-gray-100 via-gray-50 to-gray-100 border-2 border-gray-300 rounded-xl flex items-center justify-center shadow-md group-hover:scale-110 group-hover:border-yellow-400 transition-all duration-200">
-                      <svg viewBox="0 0 24 24" className="w-7 h-7" fill="none">
-                        <circle cx="12" cy="12" r="11" fill="#CC785C"/>
-                        <path d="M8 8h4l2 8H8V8z" fill="white"/>
+                      <svg viewBox="0 0 24 24" className="w-7 h-7">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" fill="#D4A574"/>
+                        <path d="M17 12c0-1.1-.9-2-2-2h-2V8c0-.55-.45-1-1-1h-4c-.55 0-1 .45-1 1v2H7c-1.1 0-2 .9-2 2v4c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2v-4z" fill="#D4A574"/>
+                        <circle cx="9" cy="12" r="1" fill="#D4A574"/>
+                        <circle cx="12" cy="12" r="1" fill="#D4A574"/>
+                        <circle cx="15" cy="12" r="1" fill="#D4A574"/>
                       </svg>
                       <div className="absolute -top-1 -right-1 flex gap-0.5 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
                         <svg className="w-3 h-3 text-yellow-400" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6 4.6 2.3 7L12 16.4 5.7 21l2.3-7-6-4.6h7.6z"/></svg>
@@ -186,9 +189,10 @@ export default function About() {
                   </div>
                   <div className="absolute bottom-0 left-28 group" style={{ animation: "drop3 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) 0.3s forwards" }}>
                     <div className="w-12 h-12 bg-gradient-to-br from-gray-100 via-gray-50 to-gray-100 border-2 border-gray-300 rounded-xl flex items-center justify-center shadow-md group-hover:scale-110 group-hover:border-yellow-400 transition-all duration-200">
-                      <svg viewBox="0 0 24 24" className="w-7 h-7" fill="none">
-                        <rect x="2" y="2" width="20" height="20" rx="4" fill="#000000"/>
-                        <path d="M8 8l4 4-4 4M14 16h2" stroke="#00D9FF" strokeWidth="1.5" strokeLinecap="round"/>
+                      <svg viewBox="0 0 24 24" className="w-7 h-7">
+                        <rect width="24" height="24" rx="6" fill="#000000"/>
+                        <path d="M7 8h4v8H7V8z" fill="#00D9FF"/>
+                        <path d="M13 8h4l-2 4 2 4h-4" fill="#00D9FF"/>
                       </svg>
                       <div className="absolute -top-1 -right-1 flex gap-0.5 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
                         <svg className="w-3 h-3 text-yellow-400" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6 4.6 2.3 7L12 16.4 5.7 21l2.3-7-6-4.6h7.6z"/></svg>
@@ -199,9 +203,9 @@ export default function About() {
                   </div>
                   <div className="absolute bottom-0 left-42 group" style={{ animation: "drop4 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) 0.45s forwards" }}>
                     <div className="w-12 h-12 bg-gradient-to-br from-gray-100 via-gray-50 to-gray-100 border-2 border-gray-300 rounded-xl flex items-center justify-center shadow-md group-hover:scale-110 group-hover:border-yellow-400 transition-all duration-200">
-                      <svg viewBox="0 0 24 24" className="w-7 h-7" fill="none">
-                        <circle cx="12" cy="12" r="10" fill="#7C3AED"/>
-                        <path d="M8 12l3 3 5-6" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      <svg viewBox="0 0 24 24" className="w-7 h-7">
+                        <rect width="24" height="24" rx="4" fill="#7C3AED"/>
+                        <path d="M12 6l1.5 3.5L17 11l-3.5 1.5L12 16l-1.5-3.5L7 11l3.5-1.5L12 6z" fill="white"/>
                       </svg>
                       <div className="absolute -top-1 -right-1 flex gap-0.5 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
                         <svg className="w-3 h-3 text-yellow-400" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6 4.6 2.3 7L12 16.4 5.7 21l2.3-7-6-4.6h7.6z"/></svg>
@@ -212,9 +216,9 @@ export default function About() {
                   </div>
                   <div className="absolute bottom-0 right-42 group" style={{ animation: "drop5 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) 0.6s forwards" }}>
                     <div className="w-12 h-12 bg-gradient-to-br from-gray-100 via-gray-50 to-gray-100 border-2 border-gray-300 rounded-xl flex items-center justify-center shadow-md group-hover:scale-110 group-hover:border-yellow-400 transition-all duration-200">
-                      <svg viewBox="0 0 24 24" className="w-7 h-7" fill="none">
-                        <rect x="3" y="3" width="18" height="18" rx="3" fill="#FF6B6B"/>
-                        <path d="M8 12l3 3 5-6" stroke="white" strokeWidth="2" strokeLinecap="round"/>
+                      <svg viewBox="0 0 24 24" className="w-7 h-7">
+                        <circle cx="12" cy="12" r="12" fill="#FF6B6B"/>
+                        <path d="M9 12l2 2 4-4" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                       </svg>
                       <div className="absolute -top-1 -right-1 flex gap-0.5 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
                         <svg className="w-3 h-3 text-yellow-400" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6 4.6 2.3 7L12 16.4 5.7 21l2.3-7-6-4.6h7.6z"/></svg>
@@ -225,9 +229,9 @@ export default function About() {
                   </div>
                   <div className="absolute bottom-0 right-28 group" style={{ animation: "drop6 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) 0.75s forwards" }}>
                     <div className="w-12 h-12 bg-gradient-to-br from-gray-100 via-gray-50 to-gray-100 border-2 border-gray-300 rounded-xl flex items-center justify-center shadow-md group-hover:scale-110 group-hover:border-yellow-400 transition-all duration-200">
-                      <svg viewBox="0 0 24 24" className="w-7 h-7" fill="none">
-                        <circle cx="12" cy="12" r="10" fill="#FFB800"/>
-                        <path d="M8 8l8 8M16 8l-8 8" stroke="white" strokeWidth="2" strokeLinecap="round"/>
+                      <svg viewBox="0 0 24 24" className="w-7 h-7">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z" fill="#FFB800"/>
+                        <path d="M12 6v6l4 2" stroke="white" strokeWidth="2" strokeLinecap="round"/>
                       </svg>
                       <div className="absolute -top-1 -right-1 flex gap-0.5 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
                         <svg className="w-3 h-3 text-yellow-400" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6 4.6 2.3 7L12 16.4 5.7 21l2.3-7-6-4.6h7.6z"/></svg>
@@ -238,11 +242,11 @@ export default function About() {
                   </div>
                   <div className="absolute bottom-0 right-14 group" style={{ animation: "drop7 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) 0.9s forwards" }}>
                     <div className="w-12 h-12 bg-gradient-to-br from-gray-100 via-gray-50 to-gray-100 border-2 border-gray-300 rounded-xl flex items-center justify-center shadow-md group-hover:scale-110 group-hover:border-yellow-400 transition-all duration-200">
-                      <svg viewBox="0 0 24 24" className="w-7 h-7" fill="none">
-                        <rect x="2" y="3" width="20" height="18" rx="2" fill="#000000"/>
-                        <rect x="6" y="7" width="12" height="2" fill="white"/>
-                        <rect x="6" y="11" width="8" height="2" fill="white"/>
-                        <rect x="6" y="15" width="10" height="2" fill="white"/>
+                      <svg viewBox="0 0 24 24" className="w-7 h-7">
+                        <rect width="24" height="24" rx="4" fill="#5850EC"/>
+                        <circle cx="12" cy="12" r="4" fill="white"/>
+                        <circle cx="6" cy="12" r="2" fill="white" opacity="0.7"/>
+                        <circle cx="18" cy="12" r="2" fill="white" opacity="0.7"/>
                       </svg>
                       <div className="absolute -top-1 -right-1 flex gap-0.5 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
                         <svg className="w-3 h-3 text-yellow-400" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6 4.6 2.3 7L12 16.4 5.7 21l2.3-7-6-4.6h7.6z"/></svg>
@@ -253,9 +257,11 @@ export default function About() {
                   </div>
                   <div className="absolute bottom-0 right-0 group" style={{ animation: "drop8 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) 1.05s forwards" }}>
                     <div className="w-12 h-12 bg-gradient-to-br from-gray-100 via-gray-50 to-gray-100 border-2 border-gray-300 rounded-xl flex items-center justify-center shadow-md group-hover:scale-110 group-hover:border-yellow-400 transition-all duration-200">
-                      <svg viewBox="0 0 24 24" className="w-7 h-7" fill="none">
-                        <circle cx="12" cy="12" r="10" fill="#0052CC"/>
-                        <path d="M8 12h8M12 8v8" stroke="white" strokeWidth="2" strokeLinecap="round"/>
+                      <svg viewBox="0 0 24 24" className="w-7 h-7">
+                        <rect width="24" height="24" rx="4" fill="#0052CC"/>
+                        <path d="M5 8h3v8H5V8z" fill="white"/>
+                        <path d="M10 6h3v10h-3V6z" fill="white"/>
+                        <path d="M15 10h3v6h-3v-6z" fill="white"/>
                       </svg>
                       <div className="absolute -top-1 -right-1 flex gap-0.5 opacity-0 group-hover:opacity-100 transition-opacity duration-200">
                         <svg className="w-3 h-3 text-yellow-400" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.4 7.4H22l-6 4.6 2.3 7L12 16.4 5.7 21l2.3-7-6-4.6h7.6z"/></svg>
