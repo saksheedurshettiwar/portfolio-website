@@ -117,16 +117,13 @@ export default function About() {
                 </div>
               </motion.div>
 
-              {/* Card 4 - Travel */}
+              {/* Card 4 - Years Experience */}
               <motion.div 
                 className="bg-white border border-gray-200 rounded-2xl p-6 min-h-[400px] flex flex-col justify-between"
                 whileHover={{ y: -4, boxShadow: "0 20px 40px rgba(0,0,0,0.08)" }}
               >
-                <div className="flex items-center gap-3 mb-3">
-                  <span className="text-2xl">✈️</span>
-                  <span className="text-sm font-medium text-gray-900">Travel Enthusiast</span>
-                </div>
-                <p className="text-sm text-gray-500">Exploring new places fuels my creativity and design thinking.</p>
+                <p className="text-4xl font-bold text-gray-900 mb-2">5+</p>
+                <p className="text-sm text-gray-500">Years of experience</p>
               </motion.div>
 
               {/* Card 5 - Tools */}
