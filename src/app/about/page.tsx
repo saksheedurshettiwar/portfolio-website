@@ -114,19 +114,12 @@ export default function About() {
 
               {/* Card 2 - Experience */}
               <motion.div 
-                className="bg-gradient-to-br from-green-50 to-emerald-50 border border-green-100 rounded-2xl p-6 min-h-[300px] flex flex-col justify-between"
-                whileHover={{ y: -8, scale: 1.02, boxShadow: "0 25px 50px rgba(16,185,129,0.15)" }}
+                className="bg-white border border-gray-200 rounded-2xl p-6 min-h-[300px] flex flex-col justify-between"
+                whileHover={{ y: -8, scale: 1.02, boxShadow: "0 25px 50px rgba(0,0,0,0.1)" }}
                 transition={{ duration: 0.3 }}
               >
-                <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center">
-                  <svg className="w-6 h-6 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                  </svg>
-                </div>
-                <div>
-                  <p className="text-5xl font-bold text-green-600 mb-2">5+</p>
-                  <p className="text-sm text-gray-600 font-medium">Years of experience in product design</p>
-                </div>
+                <p className="text-6xl font-bold text-gray-900">5+</p>
+                <p className="text-base text-gray-500">Years of experience</p>
               </motion.div>
 
               {/* Card 3 - AI First */}
