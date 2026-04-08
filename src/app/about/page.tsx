@@ -96,8 +96,8 @@ export default function About() {
                         to { transform: rotateX(-20deg) rotateY(360deg); }
                       }
                     `}</style>
-                    <div className="absolute bg-white/80 backdrop-blur-md border border-white/60" style={{ width: "80px", height: "80px", transform: "rotateY(0deg) translateZ(40px)" }}>
-                      <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-cyan-400/20 to-blue-500/20">
+                    <div className="absolute bg-gray-200/80 backdrop-blur-md border border-gray-300/60" style={{ width: "80px", height: "80px", transform: "rotateY(0deg) translateZ(40px)" }}>
+                      <div className="w-full h-full flex items-center justify-center">
                         <svg viewBox="0 0 38 57" className="w-12 h-12" fill="none">
                           <path d="M19 28.5C19 23.2533 23.2533 19 28.5 19C33.7467 19 38 23.2533 38 28.5C38 33.7467 33.7467 38 28.5 38C23.2533 38 19 33.7467 19 28.5Z" fill="#1ABCFE"/>
                           <path d="M0 47.5C0 42.2533 4.25329 38 9.5 38H19V47.5C19 52.7467 14.7467 57 9.5 57C4.25329 57 0 52.7467 0 47.5Z" fill="#0ACF83"/>
@@ -107,11 +107,11 @@ export default function About() {
                         </svg>
                       </div>
                     </div>
-                    <div className="absolute bg-white/60 backdrop-blur-md border border-white/40" style={{ width: "80px", height: "80px", transform: "rotateY(90deg) translateZ(40px)" }} />
-                    <div className="absolute bg-white/60 backdrop-blur-md border border-white/40" style={{ width: "80px", height: "80px", transform: "rotateY(180deg) translateZ(40px)" }} />
-                    <div className="absolute bg-white/60 backdrop-blur-md border border-white/40" style={{ width: "80px", height: "80px", transform: "rotateY(270deg) translateZ(40px)" }} />
-                    <div className="absolute bg-white/60 backdrop-blur-md border border-white/40" style={{ width: "80px", height: "80px", transform: "rotateX(90deg) translateZ(40px)" }} />
-                    <div className="absolute bg-white/60 backdrop-blur-md border border-white/40" style={{ width: "80px", height: "80px", transform: "rotateX(-90deg) translateZ(40px)" }} />
+                    <div className="absolute bg-gray-200/60 backdrop-blur-md border border-gray-300/40" style={{ width: "80px", height: "80px", transform: "rotateY(90deg) translateZ(40px)" }} />
+                    <div className="absolute bg-gray-200/60 backdrop-blur-md border border-gray-300/40" style={{ width: "80px", height: "80px", transform: "rotateY(180deg) translateZ(40px)" }} />
+                    <div className="absolute bg-gray-200/60 backdrop-blur-md border border-gray-300/40" style={{ width: "80px", height: "80px", transform: "rotateY(270deg) translateZ(40px)" }} />
+                    <div className="absolute bg-gray-200/60 backdrop-blur-md border border-gray-300/40" style={{ width: "80px", height: "80px", transform: "rotateX(90deg) translateZ(40px)" }} />
+                    <div className="absolute bg-gray-200/60 backdrop-blur-md border border-gray-300/40" style={{ width: "80px", height: "80px", transform: "rotateX(-90deg) translateZ(40px)" }} />
                   </div>
                 </div>
               </motion.div>
