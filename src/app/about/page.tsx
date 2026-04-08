@@ -121,11 +121,11 @@ export default function About() {
                 whileHover={{ y: -8, scale: 1.02, boxShadow: "0 25px 50px rgba(0,0,0,0.2)" }}
                 transition={{ duration: 0.3 }}
               >
-                <div className="text-center group-hover:text-white">
-                  <p className="text-2xl font-bold text-gray-900 leading-tight">
+                <div className="text-center">
+                  <p className="text-2xl font-bold text-gray-900 leading-tight group-hover:text-white">
                     Designing Tomorrow's
                   </p>
-                  <p className="text-2xl font-bold text-gray-900 leading-tight mt-4">
+                  <p className="text-2xl font-bold text-gray-900 leading-tight mt-4 group-hover:text-white">
                     Experiences
                   </p>
                 </div>
