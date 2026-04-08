@@ -131,21 +131,26 @@ export default function About() {
                 whileHover={{ y: -8, scale: 1.02, boxShadow: "0 25px 50px rgba(0,0,0,0.1)" }}
                 transition={{ duration: 0.3 }}
               >
-                <div className="relative flex items-center justify-center" style={{ perspective: 1000 }}>
+                <div className="relative flex items-center justify-center" style={{ perspective: 1200 }}>
                   <motion.div
                     animate={{ rotateY: 360 }}
                     transition={{ duration: 6, repeat: Infinity, ease: "linear" }}
+                    style={{ transformStyle: "preserve-3d" }}
                   >
-                    <svg viewBox="0 0 280 280" className="w-56 h-56">
-                      <defs>
-                        <path id="fullCircle" d="M 140 10 A 130 130 0 1 1 139.99 10" />
-                      </defs>
-                      <text className="fill-gray-900" fontSize="22" fontWeight="bold" fontFamily="system-ui, sans-serif">
-                        <textPath href="#fullCircle" startOffset="50%" textAnchor="middle" letterSpacing="2">
-                          AI FIRST PRODUCT DESIGNER
-                        </textPath>
-                      </text>
-                    </svg>
+                    {[...Array(8)].map((_, i) => (
+                      <div
+                        key={i}
+                        className="absolute"
+                        style={{
+                          transform: `rotateY(${i * 45}deg) translateZ(80px)`,
+                          backfaceVisibility: "hidden",
+                        }}
+                      >
+                        <span className="text-gray-900 font-bold text-lg whitespace-nowrap">
+                          AI FIRST
+                        </span>
+                      </div>
+                    ))}
                   </motion.div>
                 </div>
               </motion.div>
