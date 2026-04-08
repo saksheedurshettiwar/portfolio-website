@@ -92,31 +92,46 @@ export default function About() {
                   <style jsx>{`
                     @keyframes fall1 {
                       0% { transform: translateY(-80px) rotate(0deg); opacity: 0; }
-                      20% { opacity: 1; }
-                      100% { transform: translateY(0px) rotate(15deg); opacity: 1; }
+                      15% { opacity: 1; }
+                      40% { transform: translateY(0px) rotate(15deg); opacity: 1; }
+                      45% { transform: translateY(0px) rotate(15deg); opacity: 1; }
+                      50% { transform: translateY(-80px) rotate(0deg); opacity: 0; }
+                      100% { transform: translateY(-80px) rotate(0deg); opacity: 0; }
                     }
                     @keyframes fall2 {
                       0% { transform: translateY(-120px) rotate(0deg); opacity: 0; }
-                      20% { opacity: 1; }
-                      100% { transform: translateY(0px) rotate(-20deg); opacity: 1; }
+                      15% { opacity: 1; }
+                      40% { transform: translateY(0px) rotate(-20deg); opacity: 1; }
+                      45% { transform: translateY(0px) rotate(-20deg); opacity: 1; }
+                      50% { transform: translateY(-120px) rotate(0deg); opacity: 0; }
+                      100% { transform: translateY(-120px) rotate(0deg); opacity: 0; }
                     }
                     @keyframes fall3 {
                       0% { transform: translateY(-100px) rotate(0deg); opacity: 0; }
-                      20% { opacity: 1; }
-                      100% { transform: translateY(0px) rotate(10deg); opacity: 1; }
+                      15% { opacity: 1; }
+                      40% { transform: translateY(0px) rotate(10deg); opacity: 1; }
+                      45% { transform: translateY(0px) rotate(10deg); opacity: 1; }
+                      50% { transform: translateY(-100px) rotate(0deg); opacity: 0; }
+                      100% { transform: translateY(-100px) rotate(0deg); opacity: 0; }
                     }
                     @keyframes fall4 {
                       0% { transform: translateY(-140px) rotate(0deg); opacity: 0; }
-                      20% { opacity: 1; }
-                      100% { transform: translateY(0px) rotate(-10deg); opacity: 1; }
+                      15% { opacity: 1; }
+                      40% { transform: translateY(0px) rotate(-10deg); opacity: 1; }
+                      45% { transform: translateY(0px) rotate(-10deg); opacity: 1; }
+                      50% { transform: translateY(-140px) rotate(0deg); opacity: 0; }
+                      100% { transform: translateY(-140px) rotate(0deg); opacity: 0; }
                     }
                     @keyframes fall5 {
                       0% { transform: translateY(-90px) rotate(0deg); opacity: 0; }
-                      20% { opacity: 1; }
-                      100% { transform: translateY(0px) rotate(25deg); opacity: 1; }
+                      15% { opacity: 1; }
+                      40% { transform: translateY(0px) rotate(25deg); opacity: 1; }
+                      45% { transform: translateY(0px) rotate(25deg); opacity: 1; }
+                      50% { transform: translateY(-90px) rotate(0deg); opacity: 0; }
+                      100% { transform: translateY(-90px) rotate(0deg); opacity: 0; }
                     }
                   `}</style>
-                  <div className="absolute bottom-2 left-4" style={{ animation: "fall1 1.5s ease-out forwards" }}>
+                  <div className="absolute bottom-2 left-4" style={{ animation: "fall1 2.5s ease-in-out infinite" }}>
                     <div className="w-12 h-12 bg-gray-200/90 backdrop-blur-sm border border-gray-300/60 rounded-xl flex items-center justify-center shadow-sm">
                       <svg viewBox="0 0 38 57" className="w-7 h-7">
                         <path d="M19 28.5C19 23.2533 23.2533 19 28.5 19C33.7467 19 38 23.2533 38 28.5C38 33.7467 33.7467 38 28.5 38C23.2533 38 19 33.7467 19 28.5Z" fill="#1ABCFE"/>
