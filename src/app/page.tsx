@@ -35,33 +35,6 @@ const projects = [
   },
 ];
 
-const features = [
-  {
-    num: "01",
-    title: "Research & Discovery",
-    description:
-      "User interviews, competitive analysis, and data synthesis to define the real problem before touching Figma.",
-  },
-  {
-    num: "02",
-    title: "Rapid Ideation",
-    description:
-      "Low-fidelity explorations to test concepts quickly. Kill bad ideas fast, double down on what works.",
-  },
-  {
-    num: "03",
-    title: "High-Fidelity Design",
-    description:
-      "Pixel-perfect execution with component systems built to scale. Every state, every edge case considered.",
-  },
-  {
-    num: "04",
-    title: "Validate & Ship",
-    description:
-      "Usability testing, A/B experiments, and close collaboration with engineering to ship right — then iterate.",
-  },
-];
-
 const skills = [
   "Figma",
   "0→1 Product Design",
@@ -186,7 +159,6 @@ function CounterAnimation({ target, suffix = "" }: { target: string; suffix?: st
 }
 
 export default function Home() {
-  const [activeFeature, setActiveFeature] = useState(0);
   const heroRef = useRef(null);
   
   const { scrollYProgress } = useScroll({
@@ -324,61 +296,6 @@ export default function Home() {
               </motion.div>
             </AnimatedSection>
           ))}
-        </div>
-      </section>
-
-      {/* HOW I WORK */}
-      <section className="border-y border-gray-200 bg-gray-50">
-        <div className="max-w-6xl mx-auto px-4 md:px-8 py-16 md:py-24 grid md:grid-cols-2 gap-10 md:gap-20">
-          <AnimatedSection>
-            <span className="inline-flex items-center gap-1.5 text-[11px] font-medium text-gray-400 border border-gray-200 px-3 py-1 rounded-full mb-4 md:mb-6">
-              How I work
-            </span>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-gray-900 mb-4 md:mb-5">
-              Designed to<br />
-              <span className="text-gray-400">move fast.</span>
-            </h2>
-            <p className="text-base text-gray-500 max-w-2xl leading-relaxed">
-              A research-first approach that doesn&apos;t slow down shipping. Every design
-              decision is backed by data and validated with users.
-            </p>
-          </AnimatedSection>
-          <div>
-            {features.map((feature, index) => (
-              <motion.div
-                key={feature.num}
-                className="py-6 border-b border-gray-200 last:border-b-0 cursor-pointer"
-                onClick={() => setActiveFeature(index)}
-                initial={{ opacity: 0, x: 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
-                whileHover={{ x: 8 }}
-              >
-                <p className="text-[11px] font-medium font-mono text-gray-300 mb-2">
-                  {feature.num}
-                </p>
-                <h3
-                  className={`text-sm font-semibold mb-2 transition-colors ${
-                    activeFeature === index ? "text-gray-900" : "text-gray-400"
-                  }`}
-                >
-                  {feature.title}
-                </h3>
-                <motion.p 
-                  className="text-sm text-gray-500 leading-relaxed max-w-xs"
-                  initial={{ height: 0, opacity: 0 }}
-                  animate={{ 
-                    height: activeFeature === index ? "auto" : 0, 
-                    opacity: activeFeature === index ? 1 : 0 
-                  }}
-                  transition={{ duration: 0.3 }}
-                >
-                  {feature.description}
-                </motion.p>
-              </motion.div>
-            ))}
-          </div>
         </div>
       </section>
 
