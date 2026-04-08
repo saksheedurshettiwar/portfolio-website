@@ -27,35 +27,18 @@ const tools = ["Figma", "Claude", "Cursor", "Framer", "Jitter", "Notion", "Jira"
 
 function ToolsChips() {
   return (
-    <div className="mt-4 flex items-center justify-center">
-      <div className="relative w-44 h-44">
-        <div className="absolute inset-0 rounded-full border border-gray-200" />
-        {tools.map((tool, i) => {
-          const angle = (i / tools.length) * 2 * Math.PI - Math.PI / 2;
-          const x = Math.cos(angle) * 70 + 68;
-          const y = Math.sin(angle) * 70 + 68;
-          return (
-            <motion.span
-              key={tool}
-              className="absolute text-xs font-medium text-gray-500"
-              style={{ left: x, top: y, transform: "translate(-50%, -50%)" }}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: i * 0.1 }}
-              whileHover={{ color: "#111" }}
-            >
-              {tool}
-            </motion.span>
-          );
-        })}
-        <motion.div
-          className="absolute inset-8 rounded-full bg-gray-50 flex items-center justify-center"
-          animate={{ scale: [1, 1.02, 1] }}
-          transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+    <div className="mt-4 flex flex-wrap gap-x-4 gap-y-2">
+      {tools.map((tool, i) => (
+        <motion.span
+          key={tool}
+          className="text-sm text-gray-400"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: i * 0.08 }}
         >
-          <span className="text-lg text-gray-400">⚡</span>
-        </motion.div>
-      </div>
+          {tool}
+        </motion.span>
+      ))}
     </div>
   );
 }
