@@ -87,78 +87,78 @@ export default function About() {
                 whileHover={{ y: -8, scale: 1.02, boxShadow: "0 25px 50px rgba(0,0,0,0.1)" }}
                 transition={{ duration: 0.3 }}
               >
-                <style jsx global>{`
+                <style>{`
                   @keyframes drop1 {
-                    0% { transform: translateY(-200px) translateX(0px) rotate(0deg); opacity: 0; }
-                    10% { opacity: 1; }
-                    60% { transform: translateY(0px) translateX(0px) rotate(-3deg); }
-                    70% { transform: translateY(-8px) translateX(-2px) rotate(-5deg); }
-                    80% { transform: translateY(0px) translateX(1px) rotate(-2deg); }
-                    90% { transform: translateY(-3px) translateX(0px) rotate(-3deg); }
-                    100% { transform: translateY(0px) translateX(0px) rotate(-3deg); }
+                    0% { transform: translateY(-250px); opacity: 0; }
+                    15% { opacity: 1; }
+                    50% { transform: translateY(5px); }
+                    65% { transform: translateY(-3px); }
+                    80% { transform: translateY(2px); }
+                    90% { transform: translateY(0px); }
+                    100% { transform: translateY(0px); opacity: 1; }
                   }
                   @keyframes drop2 {
-                    0% { transform: translateY(-200px) translateX(0px) rotate(0deg); opacity: 0; }
-                    10% { opacity: 1; }
-                    60% { transform: translateY(0px) translateX(0px) rotate(3deg); }
-                    70% { transform: translateY(-8px) translateX(2px) rotate(5deg); }
-                    80% { transform: translateY(0px) translateX(-1px) rotate(2deg); }
-                    90% { transform: translateY(-3px) translateX(0px) rotate(3deg); }
-                    100% { transform: translateY(0px) translateX(0px) rotate(3deg); }
+                    0% { transform: translateY(-250px); opacity: 0; }
+                    15% { opacity: 1; }
+                    50% { transform: translateY(5px); }
+                    65% { transform: translateY(-3px); }
+                    80% { transform: translateY(2px); }
+                    90% { transform: translateY(0px); }
+                    100% { transform: translateY(0px); opacity: 1; }
                   }
                   @keyframes drop3 {
-                    0% { transform: translateY(-200px) translateX(0px) rotate(0deg); opacity: 0; }
-                    10% { opacity: 1; }
-                    60% { transform: translateY(0px) translateX(0px) rotate(-4deg); }
-                    70% { transform: translateY(-8px) translateX(-2px) rotate(-6deg); }
-                    80% { transform: translateY(0px) translateX(1px) rotate(-3deg); }
-                    90% { transform: translateY(-3px) translateX(0px) rotate(-4deg); }
-                    100% { transform: translateY(0px) translateX(0px) rotate(-4deg); }
+                    0% { transform: translateY(-250px); opacity: 0; }
+                    15% { opacity: 1; }
+                    50% { transform: translateY(5px); }
+                    65% { transform: translateY(-3px); }
+                    80% { transform: translateY(2px); }
+                    90% { transform: translateY(0px); }
+                    100% { transform: translateY(0px); opacity: 1; }
                   }
                   @keyframes drop4 {
-                    0% { transform: translateY(-200px) translateX(0px) rotate(0deg); opacity: 0; }
-                    10% { opacity: 1; }
-                    60% { transform: translateY(0px) translateX(0px) rotate(4deg); }
-                    70% { transform: translateY(-8px) translateX(2px) rotate(6deg); }
-                    80% { transform: translateY(0px) translateX(-1px) rotate(3deg); }
-                    90% { transform: translateY(-3px) translateX(0px) rotate(4deg); }
-                    100% { transform: translateY(0px) translateX(0px) rotate(4deg); }
+                    0% { transform: translateY(-250px); opacity: 0; }
+                    15% { opacity: 1; }
+                    50% { transform: translateY(5px); }
+                    65% { transform: translateY(-3px); }
+                    80% { transform: translateY(2px); }
+                    90% { transform: translateY(0px); }
+                    100% { transform: translateY(0px); opacity: 1; }
                   }
                   @keyframes drop5 {
-                    0% { transform: translateY(-200px) translateX(0px) rotate(0deg); opacity: 0; }
-                    10% { opacity: 1; }
-                    60% { transform: translateY(0px) translateX(0px) rotate(-2deg); }
-                    70% { transform: translateY(-8px) translateX(-2px) rotate(-4deg); }
-                    80% { transform: translateY(0px) translateX(1px) rotate(-1deg); }
-                    90% { transform: translateY(-3px) translateX(0px) rotate(-2deg); }
-                    100% { transform: translateY(0px) translateX(0px) rotate(-2deg); }
+                    0% { transform: translateY(-250px); opacity: 0; }
+                    15% { opacity: 1; }
+                    50% { transform: translateY(5px); }
+                    65% { transform: translateY(-3px); }
+                    80% { transform: translateY(2px); }
+                    90% { transform: translateY(0px); }
+                    100% { transform: translateY(0px); opacity: 1; }
                   }
                   @keyframes drop6 {
-                    0% { transform: translateY(-200px) translateX(0px) rotate(0deg); opacity: 0; }
-                    10% { opacity: 1; }
-                    60% { transform: translateY(0px) translateX(0px) rotate(5deg); }
-                    70% { transform: translateY(-8px) translateX(2px) rotate(7deg); }
-                    80% { transform: translateY(0px) translateX(-1px) rotate(4deg); }
-                    90% { transform: translateY(-3px) translateX(0px) rotate(5deg); }
-                    100% { transform: translateY(0px) translateX(0px) rotate(5deg); }
+                    0% { transform: translateY(-250px); opacity: 0; }
+                    15% { opacity: 1; }
+                    50% { transform: translateY(5px); }
+                    65% { transform: translateY(-3px); }
+                    80% { transform: translateY(2px); }
+                    90% { transform: translateY(0px); }
+                    100% { transform: translateY(0px); opacity: 1; }
                   }
                   @keyframes drop7 {
-                    0% { transform: translateY(-200px) translateX(0px) rotate(0deg); opacity: 0; }
-                    10% { opacity: 1; }
-                    60% { transform: translateY(0px) translateX(0px) rotate(-5deg); }
-                    70% { transform: translateY(-8px) translateX(-2px) rotate(-7deg); }
-                    80% { transform: translateY(0px) translateX(1px) rotate(-3deg); }
-                    90% { transform: translateY(-3px) translateX(0px) rotate(-5deg); }
-                    100% { transform: translateY(0px) translateX(0px) rotate(-5deg); }
+                    0% { transform: translateY(-250px); opacity: 0; }
+                    15% { opacity: 1; }
+                    50% { transform: translateY(5px); }
+                    65% { transform: translateY(-3px); }
+                    80% { transform: translateY(2px); }
+                    90% { transform: translateY(0px); }
+                    100% { transform: translateY(0px); opacity: 1; }
                   }
                   @keyframes drop8 {
-                    0% { transform: translateY(-200px) translateX(0px) rotate(0deg); opacity: 0; }
-                    10% { opacity: 1; }
-                    60% { transform: translateY(0px) translateX(0px) rotate(2deg); }
-                    70% { transform: translateY(-8px) translateX(2px) rotate(4deg); }
-                    80% { transform: translateY(0px) translateX(-1px) rotate(1deg); }
-                    90% { transform: translateY(-3px) translateX(0px) rotate(2deg); }
-                    100% { transform: translateY(0px) translateX(0px) rotate(2deg); }
+                    0% { transform: translateY(-250px); opacity: 0; }
+                    15% { opacity: 1; }
+                    50% { transform: translateY(5px); }
+                    65% { transform: translateY(-3px); }
+                    80% { transform: translateY(2px); }
+                    90% { transform: translateY(0px); }
+                    100% { transform: translateY(0px); opacity: 1; }
                   }
                 `}</style>
                 <p className="text-lg font-bold text-gray-900 relative z-10">Tools I can use</p>
