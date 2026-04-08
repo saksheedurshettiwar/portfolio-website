@@ -131,22 +131,22 @@ export default function About() {
                 whileHover={{ y: -8, scale: 1.02, boxShadow: "0 25px 50px rgba(0,0,0,0.1)" }}
                 transition={{ duration: 0.3 }}
               >
-                <div className="relative w-full h-full flex items-center justify-center">
+                <div className="relative w-64 h-64 flex items-center justify-center">
                   <motion.div
-                    className="absolute"
+                    className="absolute w-full h-full"
                     animate={{ rotate: 360 }}
                     transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
                   >
-                    <svg viewBox="0 0 280 300" className="w-52 h-56">
+                    <svg viewBox="0 0 300 300" className="w-full h-full">
                       <defs>
-                        <path id="circlePath" d="M 140 150 A 120 120 0 1 1 139.99 150" />
+                        <path id="circlePath" d="M 150,150 m -110,0 a 110,110 0 1,1 220,0 a 110,110 0 1,1 -220,0" />
                       </defs>
                       <text
                         fill="#111"
-                        fontSize="18"
+                        fontSize="16"
                         fontWeight="bold"
                         fontFamily="system-ui, sans-serif"
-                        letterSpacing="2"
+                        letterSpacing="3"
                       >
                         <textPath href="#circlePath" startOffset="0%">
                           AI FIRST • PRODUCT DESIGNER •
