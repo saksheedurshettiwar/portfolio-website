@@ -257,17 +257,19 @@ export default function Home() {
             <span className="inline-flex items-center gap-1.5 text-[11px] font-medium text-gray-400 border border-gray-200 px-3 py-1 rounded-full">
               Case Studies
             </span>
-            <motion.button 
-              className="px-4 py-1.5 bg-white border border-gray-200 text-gray-500 text-xs rounded-lg"
-              whileHover={{ scale: 1.05, x: 2 }}
-            >
-              View all →
-            </motion.button>
+            <Link href="/case-studies">
+              <motion.button 
+                className="px-4 py-1.5 bg-white border border-gray-200 text-gray-500 text-xs rounded-lg"
+                whileHover={{ scale: 1.05, x: 2 }}
+              >
+                View all →
+              </motion.button>
+            </Link>
           </div>
         </AnimatedSection>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 auto-rows-fr">
-          {projects.map((project, index) => (
+          {projects.slice(0, 2).map((project, index) => (
             <AnimatedSection key={project.title} delay={index * 0.1}>
               <motion.div
                 className="bg-white border border-gray-200 rounded-xl p-0 hover:bg-gray-50 transition-colors cursor-pointer overflow-hidden flex flex-col h-full"
