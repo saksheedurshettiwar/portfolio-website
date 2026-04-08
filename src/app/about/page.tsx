@@ -44,8 +44,14 @@ export default function About() {
         </AnimatedSection>
         
         <AnimatedSection delay={0.1}>
-          <p className="text-base md:text-lg text-gray-500 leading-relaxed max-w-2xl">
+          <p className="text-base md:text-lg text-gray-500 leading-relaxed max-w-4xl">
             I began my journey in engineering, like many who set out to discover what truly excites them. My degree says textile technologist, but my heart has always belonged to creativity — sketching people, capturing details, and turning ideas into something meaningful. That curiosity slowly led me toward the world of design.
+          </p>
+        </AnimatedSection>
+        
+        <AnimatedSection delay={0.2}>
+          <p className="text-base md:text-lg text-gray-500 leading-relaxed max-w-4xl mt-8">
+            What started as a hobby became a purpose. I grew fascinated by how digital products shape how we interact, learn, and live. I taught myself design, explored tools like Figma, and built my foundation on UX / UI and product thinking. Over time, I learned that great design sits at the intersection of empathy, logic, and simplicity.
           </p>
         </AnimatedSection>
       </section>
