@@ -182,7 +182,7 @@ export default function About() {
                 transition={{ duration: 0.3 }}
               >
                 <p className="text-6xl font-bold text-gray-900">5+</p>
-                <p className="text-base text-gray-500">Years of experience</p>
+                <p className="text-base text-gray-500 mt-4">Years of experience</p>
               </motion.div>
 
               {/* Card 5 - Photo */}
