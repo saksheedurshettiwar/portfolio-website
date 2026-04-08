@@ -39,7 +39,7 @@ export default function About() {
             About
           </h1>
           <p className="text-base md:text-lg text-gray-500 max-w-2xl leading-relaxed mb-12">
-            [Your about content goes here]
+            I think in systems. I design for people.
           </p>
         </AnimatedSection>
         
