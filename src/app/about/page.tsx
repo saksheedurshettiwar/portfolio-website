@@ -175,21 +175,14 @@ export default function About() {
                 </div>
               </motion.div>
 
-              {/* Card 4 - Products */}
+              {/* Card 4 - Experience */}
               <motion.div 
                 className="bg-white border border-gray-200 rounded-2xl p-6 h-[395px] flex flex-col justify-between"
                 whileHover={{ y: -8, scale: 1.02, boxShadow: "0 25px 50px rgba(0,0,0,0.1)" }}
                 transition={{ duration: 0.3 }}
               >
-                <div className="w-12 h-12 bg-gray-100 rounded-xl flex items-center justify-center">
-                  <svg className="w-6 h-6 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
-                  </svg>
-                </div>
-                <div>
-                  <p className="text-5xl font-bold text-gray-900 mb-2">10+</p>
-                  <p className="text-sm text-gray-500 font-medium">Products shipped from scratch</p>
-                </div>
+                <p className="text-6xl font-bold text-gray-900">5+</p>
+                <p className="text-base text-gray-500">Years of experience</p>
               </motion.div>
 
               {/* Card 5 - Photo */}
