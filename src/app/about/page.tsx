@@ -28,39 +28,53 @@ const tools = ["Figma", "Claude", "Cursor", "Framer", "Jitter", "Notion", "Jira"
 function ToolsChips() {
   return (
     <div className="mt-4 flex items-center justify-center">
-      <div className="relative w-40 h-40">
+      <div className="relative w-52 h-52">
         <motion.div
-          className="absolute inset-0 rounded-full border-2 border-dashed border-gray-200"
+          className="absolute inset-0 rounded-full border-2 border-dashed border-gray-300"
+          animate={{ rotate: -360 }}
+          transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
+        />
+        <motion.div
+          className="absolute inset-2 rounded-full border border-gray-200"
           animate={{ rotate: 360 }}
-          transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+          transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
         />
         {tools.map((tool, i) => {
           const angle = (i / tools.length) * 2 * Math.PI - Math.PI / 2;
-          const x = Math.cos(angle) * 70 + 80;
-          const y = Math.sin(angle) * 70 + 80;
+          const x = Math.cos(angle) * 80 + 78;
+          const y = Math.sin(angle) * 80 + 78;
           return (
-            <motion.span
+            <motion.div
               key={tool}
-              className="absolute text-xs font-medium text-gray-500"
+              className="absolute"
               style={{ left: x, top: y, transform: "translate(-50%, -50%)" }}
               initial={{ opacity: 0, scale: 0 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ 
-                duration: 0.3,
+                duration: 0.4,
                 delay: i * 0.1
               }}
-              whileHover={{ color: "#111", scale: 1.1 }}
+              whileHover={{ scale: 1.2, zIndex: 10 }}
             >
-              {tool}
-            </motion.span>
+              <span className="text-xs font-semibold text-gray-600 hover:text-gray-900 bg-white/80 px-3 py-1.5 rounded-full border border-gray-200 shadow-sm hover:shadow-md transition-all cursor-default">
+                {tool}
+              </span>
+            </motion.div>
           );
         })}
         <motion.div
-          className="absolute inset-8 rounded-full bg-gray-50 flex items-center justify-center"
-          animate={{ scale: [1, 1.02, 1] }}
-          transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+          className="absolute inset-10 rounded-full bg-gradient-to-br from-gray-100 to-white flex items-center justify-center shadow-lg"
+          animate={{ scale: [1, 1.03, 1] }}
+          transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
         >
-          <span className="text-2xl">⚡</span>
+          <motion.div
+            animate={{ rotate: [0, 360] }}
+            transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
+          >
+            <svg viewBox="0 0 24 24" className="w-8 h-8 text-gray-400">
+              <path fill="currentColor" d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+            </svg>
+          </motion.div>
         </motion.div>
       </div>
     </div>
