@@ -66,6 +66,15 @@ export default function About() {
             Beyond work, I&apos;m a traveler at heart. Exploring new places gives me fresh perspectives and endless inspiration. I also write blogs about design and creativity — a space where I reflect, share, and connect ideas that go beyond the screen.
           </p>
         </AnimatedSection>
+        
+        <AnimatedSection delay={0.5}>
+          <div className="flex items-start gap-4 mt-8">
+            <div className="w-[3px] h-20 bg-gray-900 rounded-full mt-2"></div>
+            <p className="text-base md:text-lg text-gray-500 leading-relaxed max-w-4xl">
+              I see design as a quiet conversation between intent and imagination, one that never really ends — it just evolves.
+            </p>
+          </div>
+        </AnimatedSection>
       </section>
     </div>
   );
