@@ -28,13 +28,23 @@ const tools = ["Figma", "Claude", "Cursor", "Framer", "Jitter", "Notion", "Jira"
 function ToolsChips() {
   return (
     <div className="flex flex-wrap gap-2 mt-4">
-      {tools.map((tool) => (
-        <span
+      {tools.map((tool, i) => (
+        <motion.span
           key={tool}
           className="px-4 py-2 bg-gray-100 text-gray-700 rounded-full text-sm font-medium"
+          animate={{ 
+            y: [0, -3, 0],
+            scale: [1, 1.02, 1]
+          }}
+          transition={{ 
+            duration: 3,
+            delay: i * 0.15,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
         >
           {tool}
-        </span>
+        </motion.span>
       ))}
     </div>
   );
