@@ -154,76 +154,18 @@ export default function About() {
                       </text>
                     </svg>
                   </motion.div>
-                  {[
-                    { shape: "circle", delay: 0, angle: 0 },
-                    { shape: "square", delay: 0.3, angle: 45 },
-                    { shape: "triangle", delay: 0.6, angle: 90 },
-                    { shape: "diamond", delay: 0.9, angle: 135 },
-                    { shape: "hexagon", delay: 1.2, angle: 180 },
-                    { shape: "star", delay: 1.5, angle: 225 },
-                    { shape: "pentagon", delay: 1.8, angle: 270 },
-                    { shape: "cross", delay: 2.1, angle: 315 },
-                  ].map((item, i) => {
-                    const rad = (item.angle * Math.PI) / 180;
-                    const x = Math.cos(rad) * 95 + 95;
-                    const y = Math.sin(rad) * 95 + 95;
-                    return (
-                      <motion.div
-                        key={i}
-                        className="absolute"
-                        style={{ left: `${x}px`, top: `${y}px` }}
-                        animate={{ 
-                          scale: [0, 1.2, 1],
-                          opacity: [0, 1, 1]
-                        }}
-                        transition={{ 
-                          duration: 0.4,
-                          delay: item.delay,
-                          repeat: Infinity,
-                          repeatDelay: 8,
-                        }}
-                      >
-                        {item.shape === "circle" && (
-                          <div className="w-3 h-3 rounded-full bg-gray-400" />
-                        )}
-                        {item.shape === "square" && (
-                          <div className="w-3 h-3 bg-gray-400 rounded-sm rotate-45" />
-                        )}
-                        {item.shape === "triangle" && (
-                          <div className="w-0 h-0 border-l-[6px] border-r-[6px] border-b-[10px] border-l-transparent border-r-transparent border-b-gray-400" />
-                        )}
-                        {item.shape === "diamond" && (
-                          <div className="w-3 h-3 bg-gray-400 rotate-45" />
-                        )}
-                        {item.shape === "hexagon" && (
-                          <svg viewBox="0 0 24 24" className="w-4 h-4">
-                            <polygon points="12,2 22,8.5 22,15.5 12,22 2,15.5 2,8.5" fill="none" stroke="#9CA3AF" strokeWidth="2" />
-                          </svg>
-                        )}
-                        {item.shape === "star" && (
-                          <svg viewBox="0 0 24 24" className="w-4 h-4">
-                            <polygon points="12,2 15,9 22,9 17,14 19,21 12,17 5,21 7,14 2,9 9,9" fill="#9CA3AF" />
-                          </svg>
-                        )}
-                        {item.shape === "pentagon" && (
-                          <svg viewBox="0 0 24 24" className="w-4 h-4">
-                            <polygon points="12,2 22,9 18,21 6,21 2,9" fill="none" stroke="#9CA3AF" strokeWidth="2" />
-                          </svg>
-                        )}
-                        {item.shape === "cross" && (
-                          <div className="w-3 h-3 bg-gray-400 rotate-45">
-                            <div className="absolute w-0.5 h-4 bg-gray-400 -translate-x-1/2 left-1/2" />
-                          </div>
-                        )}
-                      </motion.div>
-                    );
-                  })}
                   <motion.div
-                    className="w-24 h-24 rounded-full bg-gray-100 flex items-center justify-center"
+                    className="w-24 h-24 rounded-full overflow-hidden bg-gray-100"
                     animate={{ scale: [1, 1.02, 1] }}
                     transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
                   >
-                    <span className="text-gray-900 font-bold text-xs">S</span>
+                    <Image 
+                      src="/sakshee.png" 
+                      alt="Sakshee" 
+                      width={96}
+                      height={96}
+                      className="w-full h-full object-cover"
+                    />
                   </motion.div>
                 </div>
               </motion.div>
