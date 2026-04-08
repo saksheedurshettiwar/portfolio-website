@@ -82,7 +82,7 @@ export default function About() {
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
               {/* Card 1 - Profile */}
               <motion.div 
-                className="bg-white border border-gray-200 rounded-2xl p-6"
+                className="bg-white border border-gray-200 rounded-2xl p-6 min-h-[200px] flex flex-col justify-between"
                 whileHover={{ y: -4, boxShadow: "0 20px 40px rgba(0,0,0,0.08)" }}
               >
                 <h3 className="text-xl font-bold text-gray-900 mb-3">
@@ -95,7 +95,7 @@ export default function About() {
 
               {/* Card 2 - Experience */}
               <motion.div 
-                className="bg-white border border-gray-200 rounded-2xl p-6"
+                className="bg-white border border-gray-200 rounded-2xl p-6 min-h-[200px] flex flex-col justify-between"
                 whileHover={{ y: -4, boxShadow: "0 20px 40px rgba(0,0,0,0.08)" }}
               >
                 <p className="text-4xl font-bold text-gray-900 mb-2">5+</p>
@@ -104,7 +104,7 @@ export default function About() {
 
               {/* Card 3 - Expertise */}
               <motion.div 
-                className="bg-white border border-gray-200 rounded-2xl p-6"
+                className="bg-white border border-gray-200 rounded-2xl p-6 min-h-[200px] flex flex-col justify-between"
                 whileHover={{ y: -4, boxShadow: "0 20px 40px rgba(0,0,0,0.08)" }}
               >
                 <p className="text-sm font-semibold text-gray-900 mb-3">Expertise</p>
@@ -119,7 +119,7 @@ export default function About() {
 
               {/* Card 4 - Travel */}
               <motion.div 
-                className="bg-white border border-gray-200 rounded-2xl p-6"
+                className="bg-white border border-gray-200 rounded-2xl p-6 min-h-[200px] flex flex-col justify-between"
                 whileHover={{ y: -4, boxShadow: "0 20px 40px rgba(0,0,0,0.08)" }}
               >
                 <div className="flex items-center gap-3 mb-3">
@@ -131,7 +131,7 @@ export default function About() {
 
               {/* Card 5 - Tools */}
               <motion.div 
-                className="bg-white border border-gray-200 rounded-2xl p-6"
+                className="bg-white border border-gray-200 rounded-2xl p-6 min-h-[200px] flex flex-col justify-between"
                 whileHover={{ y: -4, boxShadow: "0 20px 40px rgba(0,0,0,0.08)" }}
               >
                 <p className="text-sm font-semibold text-gray-900 mb-3">Tools & Stack</p>
@@ -146,7 +146,7 @@ export default function About() {
 
               {/* Card 6 - Writing */}
               <motion.div 
-                className="bg-white border border-gray-200 rounded-2xl p-6"
+                className="bg-white border border-gray-200 rounded-2xl p-6 min-h-[200px] flex flex-col justify-between"
                 whileHover={{ y: -4, boxShadow: "0 20px 40px rgba(0,0,0,0.08)" }}
               >
                 <div className="flex items-center gap-3 mb-3">
