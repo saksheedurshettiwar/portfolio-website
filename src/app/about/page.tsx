@@ -78,12 +78,8 @@ function ToolCarousel() {
           transition={{ duration: 0.4, ease: "easeInOut" }}
           className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
         >
-          <div className="w-20 h-20 backdrop-blur-xl bg-white/30 border border-white/50 rounded-2xl flex items-center justify-center shadow-xl" style={{ boxShadow: "0 8px 32px rgba(0,0,0,0.1), inset 0 1px 1px rgba(255,255,255,0.8)" }}>
-            <svg viewBox="0 0 24 24" className="w-11 h-11">
-              {tool.paths.map((path, i) => (
-                <path key={i} d={path.d} fill={path.fill} stroke={path.stroke} strokeWidth={path.strokeWidth} />
-              ))}
-            </svg>
+          <div className="w-32 h-20 backdrop-blur-xl bg-white/30 border border-white/50 rounded-2xl flex items-center justify-center shadow-xl" style={{ boxShadow: "0 8px 32px rgba(0,0,0,0.1), inset 0 1px 1px rgba(255,255,255,0.8)" }}>
+            <span className="text-xl font-bold text-gray-900">{tool.name}</span>
           </div>
         </motion.div>
       </AnimatePresence>
