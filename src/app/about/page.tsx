@@ -131,17 +131,17 @@ export default function About() {
                 whileHover={{ y: -8, scale: 1.02, boxShadow: "0 25px 50px rgba(0,0,0,0.1)" }}
                 transition={{ duration: 0.3 }}
               >
-                <div className="relative w-48 h-48 flex items-center justify-center" style={{ perspective: 1000 }}>
+                <div className="relative flex items-center justify-center" style={{ perspective: 1000 }}>
                   <motion.div
                     animate={{ rotateY: 360 }}
                     transition={{ duration: 6, repeat: Infinity, ease: "linear" }}
                   >
-                    <svg viewBox="0 0 280 150" className="w-48 h-32">
+                    <svg viewBox="0 0 280 280" className="w-56 h-56">
                       <defs>
-                        <path id="halfCircle" d="M 20 130 A 120 120 0 0 1 260 130" />
+                        <path id="fullCircle" d="M 140 10 A 130 130 0 1 1 139.99 10" />
                       </defs>
-                      <text className="fill-gray-900" fontSize="20" fontWeight="bold" fontFamily="system-ui, sans-serif">
-                        <textPath href="#halfCircle" startOffset="50%" textAnchor="middle" letterSpacing="3">
+                      <text className="fill-gray-900" fontSize="22" fontWeight="bold" fontFamily="system-ui, sans-serif">
+                        <textPath href="#fullCircle" startOffset="50%" textAnchor="middle" letterSpacing="2">
                           AI FIRST PRODUCT DESIGNER
                         </textPath>
                       </text>
