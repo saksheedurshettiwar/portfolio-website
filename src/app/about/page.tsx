@@ -168,7 +168,7 @@ export default function About() {
                   alt="Sakshee Durshettiwar" 
                   width={400}
                   height={395}
-                  className="w-full h-full object-cover object-top"
+                  className="w-full h-full object-cover object-center"
                 />
               </motion.div>
 
