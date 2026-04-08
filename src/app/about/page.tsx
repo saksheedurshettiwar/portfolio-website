@@ -27,34 +27,32 @@ const tools = ["Figma", "Claude", "Cursor", "Framer", "Jitter", "Notion", "Jira"
 
 function ToolsChips() {
   return (
-    <div className="mt-4 overflow-hidden">
-      <div className="flex gap-2">
-        <motion.div
-          className="flex gap-2"
-          animate={{ x: [0, -400] }}
-          transition={{ 
-            duration: 12, 
-            repeat: Infinity, 
-            ease: "linear" 
-          }}
-        >
-          {[...tools, ...tools].map((tool, i) => (
-            <motion.span
-              key={`${tool}-${i}`}
-              className="px-4 py-2 bg-gray-900 text-white rounded-full text-sm font-medium whitespace-nowrap"
-              whileHover={{ 
-                scale: 1.1,
-                backgroundColor: "#fff",
-                color: "#111",
-                boxShadow: "0 10px 30px rgba(0,0,0,0.2)"
-              }}
-              transition={{ type: "spring", stiffness: 400, damping: 10 }}
-            >
-              {tool}
-            </motion.span>
-          ))}
-        </motion.div>
-      </div>
+    <div className="mt-4 h-40 overflow-hidden">
+      <motion.div
+        className="flex flex-col gap-2"
+        animate={{ y: [0, -180] }}
+        transition={{ 
+          duration: 8, 
+          repeat: Infinity, 
+          ease: "linear" 
+        }}
+      >
+        {[...tools, ...tools].map((tool, i) => (
+          <motion.span
+            key={`${tool}-${i}`}
+            className="px-4 py-2 bg-gray-900 text-white rounded-full text-sm font-medium whitespace-nowrap text-center"
+            whileHover={{ 
+              scale: 1.1,
+              backgroundColor: "#fff",
+              color: "#111",
+              boxShadow: "0 10px 30px rgba(0,0,0,0.2)"
+            }}
+            transition={{ type: "spring", stiffness: 400, damping: 10 }}
+          >
+            {tool}
+          </motion.span>
+        ))}
+      </motion.div>
     </div>
   );
 }
