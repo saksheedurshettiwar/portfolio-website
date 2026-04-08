@@ -222,8 +222,23 @@ export default function Home() {
         </motion.div>
       </section>
 
+      {/* SKILLS MARQUEE */}
+      <div className="border-y border-gray-200 py-14 overflow-hidden">
+        <div className="flex animate-marquee whitespace-nowrap">
+          {[...skills, ...skills].map((skill, index) => (
+            <span
+              key={index}
+              className="inline-flex items-center gap-3 px-8 border-r border-gray-200"
+            >
+              <span className="text-sm font-medium text-gray-500">{skill}</span>
+              <span className="w-1 h-1 rounded-full bg-gray-200"></span>
+            </span>
+          ))}
+        </div>
+      </div>
+
       {/* WORK */}
-      <section className="max-w-6xl mx-auto px-4 md:px-8 pb-16 md:pb-24">
+      <section className="max-w-6xl mx-auto px-4 md:px-8 py-16 md:pt-24 pb-16 md:pb-24">
         <AnimatedSection>
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-6">
             <span className="inline-flex items-center gap-1.5 text-[11px] font-medium text-gray-400 border border-gray-200 px-3 py-1 rounded-full">
@@ -298,21 +313,6 @@ export default function Home() {
           ))}
         </div>
       </section>
-
-      {/* SKILLS MARQUEE */}
-      <div className="border-b border-gray-200 py-14 overflow-hidden">
-        <div className="flex animate-marquee whitespace-nowrap">
-          {[...skills, ...skills].map((skill, index) => (
-            <span
-              key={index}
-              className="inline-flex items-center gap-3 px-8 border-r border-gray-200"
-            >
-              <span className="text-sm font-medium text-gray-500">{skill}</span>
-              <span className="w-1 h-1 rounded-full bg-gray-200"></span>
-            </span>
-          ))}
-        </div>
-      </div>
 
       {/* STATS */}
       <div className="max-w-6xl mx-auto px-4 md:px-8 py-16 md:py-24 grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 border-b border-gray-200">
