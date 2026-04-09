@@ -101,6 +101,7 @@ export default function AccessIQCaseStudy() {
               <p className="text-4xl md:text-5xl font-bold mb-2">100%</p>
               <p className="text-sm text-gray-400">audit evidence coverage with zero manual exports</p>
             </div>
+            </div>
           </div>
         </div>
         
