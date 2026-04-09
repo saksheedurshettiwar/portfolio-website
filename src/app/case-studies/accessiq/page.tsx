@@ -108,6 +108,7 @@ export default function AccessIQCaseStudy() {
       decision: "AI recommendation leads at 97% confidence in plain English. \"James has a valid business need — but full export isn't required for it.\" Below that: exactly what he can and cannot do on each platform. Manager confirms a recommendation — they don't interpret raw data.",
       insight: "Adding the confidence score and plain-English reasoning was the single change that lifted AI suggestion adoption from 22% to 61% in testing.",
       insightLabel: "AI driven",
+      images: ["/case-studies/accessiq/AI Recommendation/01.png", "/case-studies/accessiq/AI Recommendation/02.png"],
     },
     {
       title: "The tools you need",
@@ -544,11 +545,29 @@ export default function AccessIQCaseStudy() {
                     </div>
                     
                     {/* Mock Image(s) - Full Width */}
-                    {'image' in screen && screen.image && (
-                      <div className="mb-6 overflow-hidden rounded-xl border border-gray-200">
+                    <div className="mb-6 space-y-6">
+                      {'images' in screen && screen.images ? (
+                        screen.images.map((img, imgIdx) => (
+                          <motion.div
+                            key={imgIdx}
+                            whileHover={{ scale: 1.01 }}
+                            transition={{ duration: 0.3 }}
+                            className="overflow-hidden rounded-xl border border-gray-200"
+                          >
+                            <Image 
+                              src={img} 
+                              alt={`${screen.title} ${imgIdx + 1}`} 
+                              width={1200} 
+                              height={675} 
+                              className="w-full h-auto" 
+                            />
+                          </motion.div>
+                        ))
+                      ) : 'image' in screen && screen.image && (
                         <motion.div
                           whileHover={{ scale: 1.01 }}
                           transition={{ duration: 0.3 }}
+                          className="overflow-hidden rounded-xl border border-gray-200"
                         >
                           <Image 
                             src={screen.image} 
@@ -558,8 +577,8 @@ export default function AccessIQCaseStudy() {
                             className="w-full h-auto" 
                           />
                         </motion.div>
-                      </div>
-                    )}
+                      )}
+                    </div>
                     
                     {/* Research Insight */}
                     <div className="border-l-4 border-gray-900 pl-5 py-3">
