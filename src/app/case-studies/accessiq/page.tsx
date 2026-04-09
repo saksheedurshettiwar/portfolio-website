@@ -96,9 +96,14 @@ export default function AccessIQCaseStudy() {
             <p className="text-base text-gray-500 leading-relaxed mb-4">
               What a manager actually sees when they try to approve access.
             </p>
-            <p className="text-base text-gray-500 leading-relaxed font-medium">
+            <p className="text-base text-gray-500 leading-relaxed font-medium mb-6">
               Existing tools were built by security engineers, for security engineers. Non-technical managers were handed this interface and asked to make a risk-based decision.
             </p>
+            <div className="bg-gray-100 rounded-xl p-6 text-center">
+              <p className="text-lg text-gray-600 italic">
+                "What is schema_admin? Is that bad? I'll just approve it so James isn't blocked."
+              </p>
+            </div>
           </div>
         </AnimatedSection>
         
@@ -334,11 +339,47 @@ export default function AccessIQCaseStudy() {
                 </div>
                 <div className="p-6">
                   <h3 className="font-semibold text-gray-900 mb-2">Manager Dashboard</h3>
-                  <p className="text-sm text-gray-500 mb-3">
-                    <span className="font-medium text-gray-700">The Problem:</span> Managers found out about access problems only when security escalated or an auditor raised a finding.
+                  <p className="text-sm text-gray-500 mb-2">
+                    <span className="font-medium text-gray-700">The Problem:</span> Managers found out about access problems only when security escalated or an auditor raised a finding. There was no proactive surface.
                   </p>
-                  <p className="text-sm text-gray-500">
+                  <p className="text-sm text-gray-500 mb-2">
                     <span className="font-medium text-gray-700">The Design Decision:</span> Most tools answer "how bad is it?" This one answers "what do I do right now?"
+                  </p>
+                  <p className="text-xs text-gray-400 mt-3 bg-gray-50 p-2 rounded">
+                    💡 91% of managers had no visibility into their team's access health.
+                  </p>
+                </div>
+              </div>
+              
+              <div className="bg-white border border-gray-200 rounded-xl overflow-hidden">
+                <div className="bg-gradient-to-br from-gray-100 to-gray-50 p-8 flex items-center justify-center min-h-[300px]">
+                  <div className="bg-white rounded-lg shadow-lg p-6 w-full max-w-md">
+                    <p className="text-xs text-gray-400 mb-4">Conflict Detection Alert</p>
+                    <div className="bg-red-50 border border-red-200 rounded-lg p-4 mb-4">
+                      <p className="text-sm font-semibold text-red-700 mb-2">⚠️ Conflict Detected</p>
+                      <p className="text-sm text-gray-600 mb-2">
+                        James requesting "Full Admin Access" conflicts with his current "Cards Team" role.
+                      </p>
+                      <p className="text-xs text-gray-500">
+                        If approved, James would have access to 6 systems he doesn't need.
+                      </p>
+                    </div>
+                    <div className="flex gap-2">
+                      <button className="flex-1 bg-green-600 text-white text-sm py-2 rounded-lg">Approve with Conditions</button>
+                      <button className="flex-1 bg-gray-100 text-gray-600 text-sm py-2 rounded-lg">Deny</button>
+                    </div>
+                  </div>
+                </div>
+                <div className="p-6">
+                  <h3 className="font-semibold text-gray-900 mb-2">Conflict Detection <span className="text-xs bg-green-100 text-green-700 px-2 py-0.5 rounded ml-2">AI Powered</span></h3>
+                  <p className="text-sm text-gray-500 mb-2">
+                    <span className="font-medium text-gray-700">The Problem:</span> A conflict gets detected. The tool shows a red badge. The manager has no idea what it means so they approve it anyway.
+                  </p>
+                  <p className="text-sm text-gray-500 mb-2">
+                    <span className="font-medium text-gray-700">The Design Decision:</span> The consequence comes before the buttons. Always.
+                  </p>
+                  <p className="text-xs text-gray-400 mt-3 bg-gray-50 p-2 rounded">
+                    💡 Managers approved conflicts in other tools because the warning was just a colour. Explain what could actually go wrong and they stop and think.
                   </p>
                 </div>
               </div>
@@ -361,12 +402,12 @@ export default function AccessIQCaseStudy() {
                   </div>
                 </div>
                 <div className="p-6">
-                  <h3 className="font-semibold text-gray-900 mb-2">AI Recommendation</h3>
-                  <p className="text-sm text-gray-500 mb-3">
-                    <span className="font-medium text-gray-700">The Problem:</span> Managers received a permission string and two buttons. No context, no suggested action, no risk signal. 91% approved everything to avoid blocking their team.
+                  <h3 className="font-semibold text-gray-900 mb-2">AI Recommendation <span className="text-xs bg-green-100 text-green-700 px-2 py-0.5 rounded ml-2">AI Powered</span></h3>
+                  <p className="text-sm text-gray-500 mb-2">
+                    <span className="font-medium text-gray-700">The Problem:</span> The manager receives a permission string and two buttons. No context, no suggested action, no risk signal. 91% approve everything to avoid blocking their team.
                   </p>
                   <p className="text-sm text-gray-500">
-                    <span className="font-medium text-gray-700">The Design Decision:</span> AI recommendation leads at 97% confidence in plain English. Manager confirms a recommendation — they don't interpret raw data.
+                    <span className="font-medium text-gray-700">The Design Decision:</span> AI recommendation leads at 97% confidence in plain English. "James has a valid business need — but full export isn't required for it." Manager confirms a recommendation — they don't interpret raw data.
                   </p>
                 </div>
               </div>
@@ -398,11 +439,11 @@ export default function AccessIQCaseStudy() {
                 </div>
                 <div className="p-6">
                   <h3 className="font-semibold text-gray-900 mb-2">Triage the Queue</h3>
-                  <p className="text-sm text-gray-500 mb-3">
-                    <span className="font-medium text-gray-700">The Problem:</span> 80–120 requests a month. A flat list. Everything looked equally urgent, so nothing got real attention.
+                  <p className="text-sm text-gray-500 mb-2">
+                    <span className="font-medium text-gray-700">The Problem:</span> 80–120 requests a month. A flat list. Everything looks equally urgent, so nothing gets real attention.
                   </p>
                   <p className="text-sm text-gray-500">
-                    <span className="font-medium text-gray-700">The Design Decision:</span> Triage the queue before the manager sees it. The shape of the work in four numbers.
+                    <span className="font-medium text-gray-700">The Design Decision:</span> Triage the queue before the manager sees it. 3 need judgment. 8 the AI handles. 1 is blocked. The shape of the work in four numbers.
                   </p>
                 </div>
               </div>
