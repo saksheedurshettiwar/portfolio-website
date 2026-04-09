@@ -87,7 +87,7 @@ export default function CaseStudies() {
                     whileHover={href !== "#" ? {} : { y: -4, boxShadow: "0 20px 40px rgba(0,0,0,0.1)" }}
                     transition={{ duration: 0.3 }}
                   >
-                <div className="h-48 bg-gradient-to-br from-gray-100 to-gray-50 flex items-center justify-center flex-shrink-0 overflow-hidden">
+                <div className="h-56 bg-gradient-to-br from-gray-100 to-gray-50 flex items-center justify-center flex-shrink-0 overflow-hidden">
                   {index === 0 && (
                     <motion.div 
                       className="flex gap-3"
@@ -104,13 +104,13 @@ export default function CaseStudies() {
                       }}
                     >
                       {[1, 2, 3, 4, 1, 2, 3, 4].map((i, idx) => (
-                        <div key={idx} className="flex-shrink-0 w-[200px] h-32 overflow-hidden rounded-lg border border-gray-200 bg-white">
+                        <div key={idx} className="flex-shrink-0 w-[260px] h-40 overflow-hidden rounded-lg border border-gray-200 bg-white">
                           <Image 
                             src={`/case-studies/accessiq/0${i}.png`} 
                             alt={`AccessIQ Dashboard ${i}`}
-                            width={200}
-                            height={128}
-                            className="w-full h-full object-cover"
+                            width={260}
+                            height={160}
+                            className="w-full h-full object-contain"
                           />
                         </div>
                       ))}
