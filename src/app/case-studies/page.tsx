@@ -89,32 +89,34 @@ export default function CaseStudies() {
                   >
                 <div className="h-36 md:h-44 bg-gray-100 flex items-center flex-shrink-0 overflow-hidden p-3">
                   {index === 0 && (
-                    <motion.div 
-                      className="flex gap-3"
-                      animate={{
-                        x: [0, -1000],
-                      }}
-                      transition={{
-                        x: {
-                          repeat: Infinity,
-                          repeatType: "loop",
-                          duration: 12,
-                          ease: "linear",
-                        },
-                      }}
-                    >
-                      {[1, 2, 3, 4, 1, 2, 3, 4].map((i, idx) => (
-                        <div key={idx} className="flex-shrink-0 w-[180px] md:w-[280px]">
-                          <Image 
-                            src={`/case-studies/accessiq/0${i}.png`} 
-                            alt={`AccessIQ Dashboard ${i}`}
-                            width={280}
-                            height={160}
-                            className="w-full h-auto rounded-lg"
-                          />
-                        </div>
-                      ))}
-                    </motion.div>
+                    <div className="w-full px-3 overflow-hidden">
+                      <motion.div 
+                        className="flex gap-3"
+                        animate={{
+                          x: [0, -1000],
+                        }}
+                        transition={{
+                          x: {
+                            repeat: Infinity,
+                            repeatType: "loop",
+                            duration: 12,
+                            ease: "linear",
+                          },
+                        }}
+                      >
+                        {[1, 2, 3, 4, 1, 2, 3, 4].map((i, idx) => (
+                          <div key={idx} className="flex-shrink-0 w-[180px] md:w-[280px]">
+                            <Image 
+                              src={`/case-studies/accessiq/0${i}.png`} 
+                              alt={`AccessIQ Dashboard ${i}`}
+                              width={280}
+                              height={160}
+                              className="w-full h-auto rounded-lg"
+                            />
+                          </div>
+                        ))}
+                      </motion.div>
+                    </div>
                   )}
                   {index !== 0 && (
                     <div className="w-64 h-40 bg-white border border-gray-200 rounded-lg shadow-sm overflow-hidden">
