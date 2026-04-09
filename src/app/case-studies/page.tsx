@@ -89,7 +89,7 @@ export default function CaseStudies() {
                   >
                 <div className="h-36 md:h-44 bg-gray-100 flex items-center flex-shrink-0 overflow-hidden p-3">
                   {index === 0 && (
-                    <div className="w-full px-3 overflow-hidden">
+                    <div className="w-full p-3 h-full flex items-center overflow-hidden">
                       <motion.div 
                         className="flex gap-3"
                         animate={{
