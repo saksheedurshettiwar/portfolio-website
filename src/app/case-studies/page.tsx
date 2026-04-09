@@ -4,6 +4,7 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 const projects = [
   {
@@ -86,24 +87,54 @@ export default function CaseStudies() {
                     whileHover={href !== "#" ? {} : { y: -4, boxShadow: "0 20px 40px rgba(0,0,0,0.1)" }}
                     transition={{ duration: 0.3 }}
                   >
-                <div className="h-48 bg-gradient-to-br from-gray-100 to-gray-50 flex items-center justify-center flex-shrink-0">
-                  <div className="w-64 h-40 bg-white border border-gray-200 rounded-lg shadow-sm overflow-hidden">
-                    <div className="h-7 bg-gray-50 border-b border-gray-100 flex items-center px-3 gap-1.5">
-                      <span className="w-1.5 h-1.5 rounded-full bg-red-400"></span>
-                      <span className="w-1.5 h-1.5 rounded-full bg-yellow-400"></span>
-                      <span className="w-1.5 h-1.5 rounded-full bg-green-400"></span>
-                    </div>
-                    <div className="p-3">
-                      <div className="h-2 w-32 bg-gray-200 rounded mb-2"></div>
-                      <div className="h-2 w-20 bg-gray-100 rounded mb-3"></div>
-                      <div className="grid grid-cols-2 gap-2">
-                        <div className="h-8 bg-gray-100 rounded"></div>
-                        <div className="h-8 bg-gray-100 rounded"></div>
-                        <div className="h-8 bg-purple-100 rounded"></div>
-                        <div className="h-8 bg-gray-100 rounded"></div>
+                <div className="h-48 bg-gradient-to-br from-gray-100 to-gray-50 flex items-center justify-center flex-shrink-0 overflow-hidden">
+                  {index === 0 && (
+                    <motion.div 
+                      className="flex gap-3"
+                      animate={{
+                        x: [0, -800],
+                      }}
+                      transition={{
+                        x: {
+                          repeat: Infinity,
+                          repeatType: "loop",
+                          duration: 10,
+                          ease: "linear",
+                        },
+                      }}
+                    >
+                      {[1, 2, 3, 4, 1, 2, 3, 4].map((i, idx) => (
+                        <div key={idx} className="flex-shrink-0 w-[200px] h-32 overflow-hidden rounded-lg border border-gray-200 bg-white">
+                          <Image 
+                            src={`/case-studies/accessiq/0${i}.png`} 
+                            alt={`AccessIQ Dashboard ${i}`}
+                            width={200}
+                            height={128}
+                            className="w-full h-full object-cover"
+                          />
+                        </div>
+                      ))}
+                    </motion.div>
+                  )}
+                  {index !== 0 && (
+                    <div className="w-64 h-40 bg-white border border-gray-200 rounded-lg shadow-sm overflow-hidden">
+                      <div className="h-7 bg-gray-50 border-b border-gray-100 flex items-center px-3 gap-1.5">
+                        <span className="w-1.5 h-1.5 rounded-full bg-red-400"></span>
+                        <span className="w-1.5 h-1.5 rounded-full bg-yellow-400"></span>
+                        <span className="w-1.5 h-1.5 rounded-full bg-green-400"></span>
+                      </div>
+                      <div className="p-3">
+                        <div className="h-2 w-32 bg-gray-200 rounded mb-2"></div>
+                        <div className="h-2 w-20 bg-gray-100 rounded mb-3"></div>
+                        <div className="grid grid-cols-2 gap-2">
+                          <div className="h-8 bg-gray-100 rounded"></div>
+                          <div className="h-8 bg-gray-100 rounded"></div>
+                          <div className="h-8 bg-purple-100 rounded"></div>
+                          <div className="h-8 bg-gray-100 rounded"></div>
+                        </div>
                       </div>
                     </div>
-                  </div>
+                  )}
                 </div>
                 <div className="p-6 flex flex-col flex-1">
                   <div className="flex items-center justify-between mb-3">

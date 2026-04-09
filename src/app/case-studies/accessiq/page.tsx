@@ -118,6 +118,22 @@ export default function AccessIQCaseStudy() {
       insightLabel: "Research insight",
       image: "/case-studies/accessiq/The tools you need.png",
     },
+    {
+      title: "One click to request",
+      problem: "Employees had no self-service way to manage their own access. Everything went through their manager via Slack or email. No visibility into what was available, what they already had, or when it was expiring. Access expired silently — they found out when they got locked out.",
+      decision: "Every CTA on the catalogue leads to the same simple modal — whether requesting new access or extending existing. Two decisions only: how long do you need it, and why. The current access summary at the top means Gloria doesn't have to remember what she already has — it's shown to her before she submits.",
+      insight: "The expiry warning inside the modal reduced last-minute escalations. When employees can see their access is about to expire and extend it themselves — in under 60 seconds — managers stop getting emergency Slack messages at 9am asking why someone is locked out of a system.",
+      insightLabel: "Research insight",
+      images: ["/case-studies/accessiq/One click to request/01.png", "/case-studies/accessiq/One click to request/02.png"],
+    },
+    {
+      title: "No Slack message. No guessing. Just two questions.",
+      problem: "Requesting access meant messaging your manager, waiting for a reply, explaining what you needed, and hoping they approved the right thing. No standard process. No record of why it was granted. No way to track where your request was.",
+      decision: "Two questions. That's it. What you'll get is shown before you ask — so there are no surprises after approval. Duration defaults to 30 days, not permanent. The justification field creates the audit trail automatically — no separate process, no follow-up email.",
+      insight: "The \"Why do you need this?\" field isn't just compliance. It's the single input that turns a rubber-stamp approval into a documented decision. When managers can see the justification before they approve — they make better calls. When auditors ask why someone has access — the answer is already there.",
+      insightLabel: "Research insight",
+      images: ["/case-studies/accessiq/No Slack message. No guessing. Just two questions/01.png", "/case-studies/accessiq/No Slack message. No guessing. Just two questions/02.png"],
+    },
   ];
 
   return (
