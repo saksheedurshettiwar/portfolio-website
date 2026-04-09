@@ -75,7 +75,7 @@ export default function CaseStudies() {
           </p>
         </AnimatedSection>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
           {projects.map((project, index) => {
             const hrefs = ["/case-studies/accessiq", "/case-studies/finco", "/case-studies/hivel", "#"];
             const href = hrefs[index];
@@ -90,7 +90,7 @@ export default function CaseStudies() {
                 <div className="h-56 bg-gray-100 flex items-center flex-shrink-0 overflow-hidden">
                   {index === 0 && (
                     <motion.div 
-                      className="flex gap-3"
+                      className="flex gap-1"
                       animate={{
                         x: [0, -800],
                       }}
