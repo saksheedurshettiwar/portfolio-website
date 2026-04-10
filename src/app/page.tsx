@@ -21,22 +21,6 @@ const projects = [
   },
 ];
 
-const skills = [
-  "Figma",
-  "0→1 Product Design",
-  "UX Research",
-  "Design Systems",
-  "Analytics & Data Viz",
-  "Interaction Design",
-  "Multi-role Platforms",
-  "Usability Testing",
-  "FigJam",
-  "Prototyping",
-  "AI-native Workflow",
-  "RBAC Design",
-  "Founder Collaboration",
-];
-
 const experiments = [
   {
     title: "Design System Generator",
