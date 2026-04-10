@@ -232,6 +232,14 @@ export default function Home() {
               </span>
               <span className="text-xs text-gray-400">Things I&apos;m building</span>
             </div>
+            <Link href="/experiments">
+              <motion.button 
+                className="px-4 py-1.5 bg-white border border-gray-200 text-gray-400 text-xs rounded-lg hover:border-gray-300 transition-colors"
+                whileHover={{ scale: 1.05, x: 2 }}
+              >
+                View all →
+              </motion.button>
+            </Link>
           </div>
         </AnimatedSection>
         
