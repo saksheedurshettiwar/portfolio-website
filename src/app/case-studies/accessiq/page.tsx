@@ -109,9 +109,9 @@ export default function AccessIQCaseStudy() {
     },
     {
       title: "Access Catalogue",
-      problem: "Employees had no way to see what tools existed or what they actually did. They messaged their manager, who guessed what to grant — so requests came in broad to avoid going back and asking twice.",
-      decision: "One place. Every tool, described in plain English — what you can do, what you can't, and how many peers in your role already have it. Browse before you request.",
-      insight: "Showing peer data directly reduced over-broad requests. When employees could see their colleagues only had read-only access, they stopped asking for admin — cutting review volume and audit risk downstream.",
+      problem: "Employees had no way to see what tools existed or what they did. They messaged their manager, who guessed what to grant — so requests came in broad to avoid asking twice.",
+      decision: "One place. Every tool described in plain English — what you can do, what you can't, and how many peers in your role already have it.",
+      insight: "Showing peer data directly reduced over-broad requests. When employees saw colleagues only had read-only access, they stopped asking for admin — cutting review volume downstream.",
       insightLabel: "Research insight",
       image: "/case-studies/accessiq/The tools you need.png",
     },
