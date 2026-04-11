@@ -76,7 +76,7 @@ export default function AccessIQCaseStudy() {
 
   const screens = [
     {
-      title: "01 — Manager Dashboard",
+      title: "Manager Dashboard",
       subtitle: "Joiner · Mover · Leaver",
       problem: "Managers had no visibility into their team's access health. They only found out something was wrong when security escalated it — or an auditor did.",
       decision: "Most tools answer \"how bad is it?\" This one answers \"what do I do right now?\" Five KPIs replace the Slack messages, emails, and spreadsheet tabs managers were juggling every morning.",
@@ -85,7 +85,7 @@ export default function AccessIQCaseStudy() {
       image: "/case-studies/accessiq/Manager Dashboard.png",
     },
     {
-      title: "02 — Conflict Detection",
+      title: "Conflict Detection",
       badge: "AI Powered",
       problem: "A conflict gets detected. The tool shows a red badge. The manager has no idea what it means so they approve it anyway.",
       decision: "The consequence comes before the buttons. Always.",
@@ -94,7 +94,7 @@ export default function AccessIQCaseStudy() {
       image: "/case-studies/accessiq/Conflict Detection.png",
     },
     {
-      title: "03 — Triage Queue",
+      title: "Triage Queue",
       problem: "80–120 requests a month. A flat list. Everything looks equally urgent, so nothing gets real attention.",
       decision: "Triage the queue before the manager sees it. 3 need judgment. 8 the AI handles. 1 is blocked. The shape of the work in four numbers.",
       insight: "80–120 requests per month needed prioritization to reduce cognitive load on managers.",
@@ -102,7 +102,7 @@ export default function AccessIQCaseStudy() {
       image: "/case-studies/accessiq/Triage Queue.png",
     },
     {
-      title: "04 — AI Recommendation",
+      title: "AI Recommendation",
       badge: "AI Powered",
       problem: "The manager receives a permission string and two buttons. No context, no suggested action, no risk signal. 91% approve everything to avoid blocking their team.",
       decision: "AI recommendation leads at 97% confidence in plain English. \"James has a valid business need — but full export isn't required for it.\" Below that: exactly what he can and cannot do on each platform. Manager confirms a recommendation — they don't interpret raw data.",
@@ -111,7 +111,7 @@ export default function AccessIQCaseStudy() {
       images: ["/case-studies/accessiq/AI Recommendation/01.png", "/case-studies/accessiq/AI Recommendation/02.png"],
     },
     {
-      title: "05 — The tools you need",
+      title: "The tools you need",
       problem: "Employees had no way to see what tools were available or what each one actually did. They'd message their manager, who'd guess what to grant. Requests came in broad to avoid asking twice. Every company was solving this differently — in a spreadsheet, in Slack, in someone's head.",
       decision: "One place. Every available tool. Described in plain English — what you can do, what you can't, how long approval takes, how many people in your role already have it.",
       insight: "Showing peer data reduced over-broad access requests. Employees stopped asking for admin access when they could see their peers only had read-only. Less over-requesting means less to review, less to remediate, less audit risk.",
@@ -119,7 +119,7 @@ export default function AccessIQCaseStudy() {
       image: "/case-studies/accessiq/The tools you need.png",
     },
     {
-      title: "06 — One click to request",
+      title: "One click to request",
       problem: "Employees had no self-service way to manage their own access. Everything went through their manager via Slack or email. No visibility into what was available, what they already had, or when it was expiring. Access expired silently — they found out when they got locked out.",
       decision: "Every CTA on the catalogue leads to the same simple modal — whether requesting new access or extending existing. Two decisions only: how long do you need it, and why. The current access summary at the top means Gloria doesn't have to remember what she already has — it's shown to her before she submits.",
       insight: "The expiry warning inside the modal reduced last-minute escalations. When employees can see their access is about to expire and extend it themselves — in under 60 seconds — managers stop getting emergency Slack messages at 9am asking why someone is locked out of a system.",
@@ -127,7 +127,7 @@ export default function AccessIQCaseStudy() {
       images: ["/case-studies/accessiq/One click to request/01.png", "/case-studies/accessiq/One click to request/02.png"],
     },
     {
-      title: "07 — No Slack message. No guessing. Just two questions.",
+      title: "No Slack message. No guessing. Just two questions.",
       problem: "Requesting access meant messaging your manager, waiting for a reply, explaining what you needed, and hoping they approved the right thing. No standard process. No record of why it was granted. No way to track where your request was.",
       decision: "Two questions. That's it. What you'll get is shown before you ask — so there are no surprises after approval. Duration defaults to 30 days, not permanent. The justification field creates the audit trail automatically — no separate process, no follow-up email.",
       insight: "The \"Why do you need this?\" field isn't just compliance. It's the single input that turns a rubber-stamp approval into a documented decision. When managers can see the justification before they approve — they make better calls. When auditors ask why someone has access — the answer is already there.",
