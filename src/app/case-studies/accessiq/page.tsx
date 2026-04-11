@@ -77,7 +77,6 @@ export default function AccessIQCaseStudy() {
   const screens = [
     {
       title: "Manager Dashboard",
-      subtitle: "Joiner · Mover · Leaver",
       problem: "Managers had no visibility into their team's access health. They only found out something was wrong when security escalated it — or an auditor did.",
       decision: "Most tools answer \"how bad is it?\" This one answers \"what do I do right now?\" Five KPIs replace the Slack messages, emails, and spreadsheet tabs managers were juggling every morning.",
       insight: "91% of managers had no consolidated view of their team's access health. The KPIs weren't pulled from a compliance checklist — they came from what managers were already trying to track themselves.",
@@ -86,7 +85,6 @@ export default function AccessIQCaseStudy() {
     },
     {
       title: "Conflict Detection",
-      subtitle: "Segregation of Duties · Toxic Combinations",
       problem: "When a conflict was flagged, tools showed a red badge and nothing else. Managers had no idea what it meant — so they approved it anyway and moved on.",
       decision: "The consequence of approving comes before the buttons. Always. Showing the real-world risk in plain English — not just a colour — is what makes managers actually stop and think.",
       insight: "Managers approved conflicts in other tools because warnings were visual noise with no meaning. Replacing the red badge with a one-line consequence was the change that turned ignored alerts into actual decisions.",
