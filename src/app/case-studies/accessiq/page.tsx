@@ -125,9 +125,9 @@ export default function AccessIQCaseStudy() {
     },
     {
       title: "No Slack message. No guessing. Just two questions.",
-      problem: "Requesting access meant messaging your manager, waiting, explaining, and hoping they approved the right thing. No standard process, no record of why it was granted, no way to track it.",
-      decision: "Two questions. What you'll get is shown before you ask — no surprises after approval. The justification field creates the audit trail automatically, with no separate process or follow-up email.",
-      insight: "The \"Why do you need this?\" field isn't just compliance — it turns a rubber-stamp approval into a documented decision. When managers see the justification, they make better calls. When auditors ask, the answer is already there.",
+      problem: "Requesting access meant messaging your manager, waiting, explaining, and hoping they approved the right thing. No standard process, no record, no way to track it.",
+      decision: "Two questions. What you'll get is shown before you ask — no surprises post-approval. The justification field creates the audit trail automatically, no separate process needed.",
+      insight: "The \"Why do you need this?\" field turns a rubber-stamp approval into a documented decision. When managers see the reason, they make better calls. When auditors ask, the answer is already there.",
       insightLabel: "Research insight",
       images: ["/case-studies/accessiq/No Slack message. No guessing. Just two questions/01.png", "/case-studies/accessiq/No Slack message. No guessing. Just two questions/02.png"],
     },
