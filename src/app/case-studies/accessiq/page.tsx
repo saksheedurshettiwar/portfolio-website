@@ -85,12 +85,12 @@ export default function AccessIQCaseStudy() {
       image: "/case-studies/accessiq/Manager Dashboard.png",
     },
     {
-      title: "Conflict Detection",
-      badge: "AI Powered",
-      problem: "A conflict gets detected. The tool shows a red badge. The manager has no idea what it means so they approve it anyway.",
-      decision: "The consequence comes before the buttons. Always.",
-      insight: "Managers approved conflicts in other tools because the warning was just a colour. Explain what could actually go wrong and they stop and think.",
-      insightLabel: "AI driven",
+      title: "02 — Conflict Detection",
+      subtitle: "Segregation of Duties · Toxic Combinations",
+      problem: "When a conflict was flagged, tools showed a red badge and nothing else. Managers had no idea what it meant — so they approved it anyway and moved on.",
+      decision: "The consequence of approving comes before the buttons. Always. Showing the real-world risk in plain English — not just a colour — is what makes managers actually stop and think.",
+      insight: "Managers approved conflicts in other tools because warnings were visual noise with no meaning. Replacing the red badge with a one-line consequence was the change that turned ignored alerts into actual decisions.",
+      insightLabel: "Research insight",
       image: "/case-studies/accessiq/Conflict Detection.png",
     },
     {
