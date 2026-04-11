@@ -93,7 +93,6 @@ export default function AccessIQCaseStudy() {
     },
     {
       title: "Triage Queue",
-      subtitle: "Risk-Based Prioritization · Approval Fatigue",
       problem: "80–120 requests a month, shown as a flat list. Everything looked equally urgent, so managers rubber-stamped the rest just to clear their inbox.",
       decision: "The queue is triaged before the manager sees it. Four numbers tell the shape of the work upfront — what needs judgment, what AI handles, what's blocked.",
       insight: "Approval fatigue is the leading cause of over-provisioning in high-volume IAM environments. When everything looks the same priority, risky requests slip through alongside routine ones.",
