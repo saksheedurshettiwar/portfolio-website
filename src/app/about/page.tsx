@@ -257,44 +257,60 @@ export default function About() {
               {
                 title: "User-first, always",
                 description: "Every decision starts with understanding the person who'll actually use it. If it doesn't serve them, it doesn't ship.",
+                icon: "○",
               },
               {
                 title: "Ship and iterate",
                 description: "Done beats perfect. I get something real in front of people, then refine based on what actually works.",
+                icon: "→",
               },
               {
                 title: "Systems over screens",
                 description: "Design isn't just pixels, it's how things work. I think in patterns, not just pages.",
+                icon: "◈",
               },
               {
                 title: "Clear over clever",
                 description: "The best design is invisible. If someone needs a tutorial, I've already failed.",
+                icon: "◎",
               },
               {
                 title: "Data-informed",
                 description: "I back decisions with research and logic. Guesswork is where good design goes to die.",
+                icon: "◇",
               },
               {
                 title: "Collaborative",
                 description: "The best work happens when design, eng, and product work as one team, not handoffs.",
+                icon: "⬡",
               },
-            ].map((value, i) => (
-              <AnimatedSection key={value.title} delay={i * 0.1}>
-                <motion.div 
-                  className="bg-white border border-gray-200 rounded-xl p-6 hover:border-gray-300 transition-all h-full group cursor-pointer"
-                  whileHover={{ y: -8, boxShadow: "0 20px 40px rgba(0,0,0,0.1)" }}
+            ].map((value, i) => {
+              const cardRef = useRef(null);
+              const isInView = useInView(cardRef, { once: true, margin: "-50px" });
+              return (
+                <motion.div
+                  key={value.title}
+                  ref={cardRef}
+                  initial={{ opacity: 0, y: 40 }}
+                  animate={isInView ? { opacity: 1, y: 0 } : {}}
+                  transition={{ duration: 0.5, delay: i * 0.1, ease: [0.21, 0.47, 0.32, 0.98] }}
                 >
                   <motion.div 
-                    className="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-gray-900 transition-colors"
-                    whileHover={{ scale: 1.1, rotate: 5 }}
+                    className="bg-white border border-gray-200 rounded-xl p-6 hover:border-gray-300 transition-all h-full group cursor-pointer overflow-hidden"
+                    whileHover={{ y: -8, boxShadow: "0 20px 40px rgba(0,0,0,0.1)" }}
                   >
-                    <span className="text-lg group-hover:text-white transition-colors">✦</span>
+                    <motion.div 
+                      className="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center mb-4 group-hover:bg-gray-900 transition-colors"
+                      whileHover={{ scale: 1.1, rotate: 5 }}
+                    >
+                      <span className="text-lg group-hover:text-white transition-colors font-medium">{value.icon}</span>
+                    </motion.div>
+                    <h3 className="text-base font-semibold text-gray-900 mb-3 group-hover:text-gray-800 transition-colors">{value.title}</h3>
+                    <p className="text-sm text-gray-500 leading-relaxed group-hover:text-gray-600 transition-colors">{value.description}</p>
                   </motion.div>
-                  <h3 className="text-base font-semibold text-gray-900 mb-3 group-hover:text-gray-800 transition-colors">{value.title}</h3>
-                  <p className="text-sm text-gray-500 leading-relaxed group-hover:text-gray-600 transition-colors">{value.description}</p>
                 </motion.div>
-              </AnimatedSection>
-            ))}
+              );
+            })}
           </div>
         </AnimatedSection>
       </section>
