@@ -222,54 +222,6 @@ export default function Home() {
         </motion.div>
       </section>
 
-      {/* EXPERIMENTS */}
-      <section className="max-w-6xl mx-auto px-4 md:px-8 py-16 md:pt-24 pb-16 md:pb-24">
-        <AnimatedSection>
-          <div className="flex items-center justify-between mb-8">
-            <div className="flex items-center gap-3">
-              <span className="inline-flex items-center gap-1.5 text-[11px] font-medium text-gray-400 border border-gray-200 px-3 py-1 rounded-full">
-                Experiments
-              </span>
-              <span className="text-xs text-gray-400">Things I&apos;m building</span>
-            </div>
-            <Link href="/experiments">
-              <motion.button 
-                className="px-4 py-1.5 bg-white border border-gray-200 text-gray-400 text-xs rounded-lg hover:border-gray-300 transition-colors"
-                whileHover={{ scale: 1.05, x: 2 }}
-              >
-                View all →
-              </motion.button>
-            </Link>
-          </div>
-        </AnimatedSection>
-        
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {experiments.map((experiment, index) => (
-            <AnimatedSection key={experiment.title} delay={index * 0.1}>
-              <motion.a
-                href={experiment.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block bg-white border border-gray-200 rounded-xl p-5 hover:border-gray-300 hover:shadow-lg transition-all cursor-pointer h-full"
-                whileHover={{ y: -4 }}
-              >
-                <div className="flex items-start justify-between mb-4">
-                  <div className={`w-10 h-10 rounded-lg flex items-center justify-center ${experiment.color}`}>
-                    <span className="text-lg">{experiment.icon}</span>
-                  </div>
-                  <span className="text-gray-300">↗</span>
-                </div>
-                <h3 className="text-sm font-semibold text-gray-900 mb-2">{experiment.title}</h3>
-                <p className="text-xs text-gray-500 leading-relaxed mb-3">{experiment.description}</p>
-                <span className="inline-flex items-center gap-1 text-[10px] font-medium text-gray-400 bg-gray-100 px-2 py-1 rounded">
-                  {experiment.tag}
-                </span>
-              </motion.a>
-            </AnimatedSection>
-          ))}
-        </div>
-      </section>
-
       {/* WORK */}
       <section className="max-w-6xl mx-auto px-4 md:px-8 py-16 md:pt-24 pb-16 md:pb-24">
         <AnimatedSection>
