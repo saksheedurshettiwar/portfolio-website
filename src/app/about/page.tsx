@@ -238,6 +238,60 @@ export default function About() {
           </div>
         </AnimatedSection>
       </section>
+
+      {/* Design Values */}
+      <section className="max-w-6xl mx-auto px-4 md:px-8 py-16 md:py-24">
+        <AnimatedSection>
+          <span className="inline-flex items-center gap-1.5 text-[11px] font-medium text-gray-400 border border-gray-200 px-3 py-1 rounded-full mb-6">
+            Design Values
+          </span>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            My guiding stars as a designer
+          </h2>
+          <p className="text-base text-gray-500 mb-12 max-w-2xl">
+            No matter the project, I lean on these values to stay grounded so the work stays thoughtful, practical, and easy for people to use.
+          </p>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              {
+                title: "User-first, always",
+                description: "Every decision starts with understanding the person who'll actually use it. If it doesn't serve them, it doesn't ship.",
+              },
+              {
+                title: "Ship and iterate",
+                description: "Done beats perfect. I get something real in front of people, then refine based on what actually works.",
+              },
+              {
+                title: "Systems over screens",
+                description: "Design isn't just pixels, it's how things work. I think in patterns, not just pages.",
+              },
+              {
+                title: "Clear over clever",
+                description: "The best design is invisible. If someone needs a tutorial, I've already failed.",
+              },
+              {
+                title: "Data-informed",
+                description: "I back decisions with research and logic. Guesswork is where good design goes to die.",
+              },
+              {
+                title: "Collaborative",
+                description: "The best work happens when design, eng, and product work as one team, not handoffs.",
+              },
+            ].map((value, i) => (
+              <AnimatedSection key={value.title} delay={i * 0.1}>
+                <motion.div 
+                  className="bg-white border border-gray-200 rounded-xl p-6 hover:border-gray-300 hover:shadow-lg transition-all h-full"
+                  whileHover={{ y: -4 }}
+                >
+                  <h3 className="text-base font-semibold text-gray-900 mb-3">{value.title}</h3>
+                  <p className="text-sm text-gray-500 leading-relaxed">{value.description}</p>
+                </motion.div>
+              </AnimatedSection>
+            ))}
+          </div>
+        </AnimatedSection>
+      </section>
     </div>
   );
 }
