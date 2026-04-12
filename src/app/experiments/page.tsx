@@ -97,12 +97,9 @@ export default function Experiments() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {experiments.map((experiment, index) => (
             <AnimatedSection key={experiment.title} delay={index * 0.1}>
-              <motion.a
+              <Link
                 href={experiment.link}
-                target="_blank"
-                rel="noopener noreferrer"
                 className="block bg-white border border-gray-200 rounded-xl p-6 hover:border-gray-300 hover:shadow-lg transition-all cursor-pointer h-full"
-                whileHover={{ y: -4 }}
               >
                 <div className="flex items-start justify-between mb-4">
                   <div className={`w-12 h-12 rounded-xl flex items-center justify-center ${experiment.color}`}>
@@ -115,7 +112,7 @@ export default function Experiments() {
                 <span className="inline-flex items-center gap-1 text-xs font-medium text-gray-400 bg-gray-100 px-3 py-1.5 rounded-full">
                   {experiment.tag}
                 </span>
-              </motion.a>
+              </Link>
             </AnimatedSection>
           ))}
         </div>
