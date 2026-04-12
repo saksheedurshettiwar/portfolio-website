@@ -77,16 +77,16 @@ export default function AccessIQCaseStudy() {
   const screens = [
     {
       title: "Manager Dashboard",
-      problem: "Managers had no visibility into their team's access health. They only found out something was wrong when security escalated it — or an auditor did.",
+      problem: "Managers had no visibility into their team's access health. They only found out something was wrong when security escalated it, or an auditor did.",
       decision: "Most tools answer \"how bad is it?\" This one answers \"what do I do right now?\" Five KPIs replace the Slack messages, emails, and spreadsheet tabs managers were juggling every morning.",
-      insight: "91% of managers had no consolidated view of their team's access health. The KPIs weren't pulled from a compliance checklist — they came from what managers were already trying to track themselves.",
+      insight: "91% of managers had no consolidated view of their team's access health. The KPIs weren't pulled from a compliance checklist, they came from what managers were already trying to track themselves.",
       insightLabel: "Research insight",
       image: "/case-studies/accessiq/Manager Dashboard.png",
     },
     {
       title: "Conflict Detection",
-      problem: "When a conflict was flagged, tools showed a red badge and nothing else. Managers had no idea what it meant — so they approved it anyway and moved on.",
-      decision: "The consequence of approving comes before the buttons. Always. Showing the real-world risk in plain English — not just a colour — is what makes managers actually stop and think.",
+      problem: "When a conflict was flagged, tools showed a red badge and nothing else. Managers had no idea what it meant, so they approved it anyway and moved on.",
+      decision: "The consequence of approving comes before the buttons. Always. Showing the real-world risk in plain English, not just a colour, is what makes managers actually stop and think.",
       insight: "Managers approved conflicts in other tools because warnings were visual noise with no meaning. Replacing the red badge with a one-line consequence was the change that turned ignored alerts into actual decisions.",
       insightLabel: "Research insight",
       image: "/case-studies/accessiq/Conflict Detection.png",
@@ -94,39 +94,39 @@ export default function AccessIQCaseStudy() {
     {
       title: "Triage Queue",
       problem: "80–120 requests a month, shown as a flat list. Everything looked equally urgent, so managers rubber-stamped the rest just to clear their inbox.",
-      decision: "The queue is triaged before the manager sees it. Four numbers tell the shape of the work upfront — what needs judgment, what AI handles, what's blocked.",
+      decision: "The queue is triaged before the manager sees it. Four numbers tell the shape of the work upfront: what needs judgment, what AI handles, what's blocked.",
       insight: "Approval fatigue is the leading cause of over-provisioning in high-volume IAM environments. When everything looks the same priority, risky requests slip through alongside routine ones.",
       insightLabel: "Research insight",
       image: "/case-studies/accessiq/Triage Queue.png",
     },
     {
       title: "AI Recommendation",
-      problem: "Managers received a permission string and two buttons — no context, no suggestion, no risk signal. With nothing to go on, 91% approved everything to avoid blocking their team.",
-      decision: "The AI recommendation leads at 97% confidence, in plain English, before any buttons appear. Managers confirm a recommendation — they don't interpret raw data.",
+      problem: "Managers received a permission string and two buttons, no context, no suggestion, no risk signal. With nothing to go on, 91% approved everything to avoid blocking their team.",
+      decision: "The AI recommendation leads at 97% confidence, in plain English, before any buttons appear. Managers confirm a recommendation, they don't interpret raw data.",
       insight: "Adding the confidence score and plain-English reasoning was the single change that lifted AI suggestion adoption from 22% to 61% in testing.",
       insightLabel: "Research insight",
       images: ["/case-studies/accessiq/AI Recommendation/01.png", "/case-studies/accessiq/AI Recommendation/02.png"],
     },
     {
       title: "Access Catalogue",
-      problem: "Employees had no way to see what tools existed or what they did. They messaged their manager, who guessed what to grant — so requests came in broad to avoid asking twice.",
-      decision: "One place. Every tool described in plain English — what you can do, what you can't, and how many peers in your role already have it.",
-      insight: "Showing peer data directly reduced over-broad requests. When employees saw colleagues only had read-only access, they stopped asking for admin — cutting review volume downstream.",
+      problem: "Employees had no way to see what tools existed or what they did. They messaged their manager, who guessed what to grant, so requests came in broad to avoid asking twice.",
+      decision: "One place. Every tool described in plain English: what you can do, what you can't, and how many peers in your role already have it.",
+      insight: "Showing peer data directly reduced over-broad requests. When employees saw colleagues only had read-only access, they stopped asking for admin, cutting review volume downstream.",
       insightLabel: "Research insight",
       image: "/case-studies/accessiq/The tools you need.png",
     },
     {
       title: "One Click to Request",
-      problem: "Employees had no self-service way to manage access. Everything went through the manager via Slack — and expired access was only discovered when they got locked out.",
+      problem: "Employees had no self-service way to manage access. Everything went through the manager via Slack, and expired access was only discovered when they got locked out.",
       decision: "Two decisions only: how long, and why. Current access is shown upfront so employees know what they already have before submitting a new request.",
-      insight: "The expiry warning inside the modal let employees extend access in under 60 seconds — eliminating the emergency Slack messages managers got every time someone was locked out.",
+      insight: "The expiry warning inside the modal let employees extend access in under 60 seconds, eliminating the emergency Slack messages managers got every time someone was locked out.",
       insightLabel: "Research insight",
       images: ["/case-studies/accessiq/One click to request/01.png", "/case-studies/accessiq/One click to request/02.png"],
     },
     {
       title: "No Slack message. No guessing. Just two questions.",
       problem: "Requesting access meant messaging your manager, waiting, explaining, and hoping they approved the right thing. No standard process, no record, no way to track it.",
-      decision: "Two questions. What you'll get is shown before you ask — no surprises post-approval. The justification field creates the audit trail automatically, no separate process needed.",
+      decision: "Two questions. What you'll get is shown before you ask, no surprises post-approval. The justification field creates the audit trail automatically, no separate process needed.",
       insight: "The \"Why do you need this?\" field turns a rubber-stamp approval into a documented decision. When managers see the reason, they make better calls. When auditors ask, the answer is already there.",
       insightLabel: "Research insight",
       images: ["/case-studies/accessiq/No Slack message. No guessing. Just two questions/01.png", "/case-studies/accessiq/No Slack message. No guessing. Just two questions/02.png"],
@@ -302,7 +302,7 @@ export default function AccessIQCaseStudy() {
                   </div>
                 </FadeInOnScroll>
                 <div className="space-y-3">
-                  {["What is schema_admin? Is that bad? I'll just approve it so James isn't blocked.", "No plain-English explanation of what this actually does", "No risk context. No suggestion. No compliance note.", "PERMANENT is the default — nobody defaults to time-limited"].map((item, i) => (
+                  {["What is schema_admin? Is that bad? I'll just approve it so James isn't blocked.", "No plain-English explanation of what this actually does", "No risk context. No suggestion. No compliance note.", "PERMANENT is the default, nobody defaults to time-limited"].map((item, i) => (
                     <FadeInOnScroll key={i}>
                       <div className="flex items-start gap-3">
                         <span className="text-red-500 mt-0.5">✗</span>
@@ -323,7 +323,7 @@ export default function AccessIQCaseStudy() {
                   </div>
                 </FadeInOnScroll>
                 <div className="space-y-3">
-                  {["Plain English — Full Dashboard + Data Export not scope:read:write:export", "Risk explained in one sentence, in business language", "AI suggestion with a clear reason — manager can agree in one click", "Time-limited by default — 14 days, not permanent"].map((item, i) => (
+                  {["Plain English: Full Dashboard + Data Export not scope:read:write:export", "Risk explained in one sentence, in business language", "AI suggestion with a clear reason, manager can agree in one click", "Time-limited by default, 14 days not permanent"].map((item, i) => (
                     <FadeInOnScroll key={i}>
                       <div className="flex items-start gap-3">
                         <span className="text-green-600 mt-0.5">✓</span>
