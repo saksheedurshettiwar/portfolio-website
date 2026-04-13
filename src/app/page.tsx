@@ -3,6 +3,9 @@
 import { useState, useRef } from "react";
 import Link from "next/link";
 import { motion, useScroll, useTransform, useSpring, useInView } from "framer-motion";
+import dynamic from "next/dynamic";
+
+const Lanyard = dynamic(() => import("./Lanyard"), { ssr: false });
 
 const projects = [
   {
@@ -157,69 +160,69 @@ function CounterAnimation({ target, suffix = "" }: { target: string; suffix?: st
 }
 
 export default function Home() {
-  const heroRef = useRef(null);
-  
-  const { scrollYProgress } = useScroll({
-    target: heroRef,
-    offset: ["start start", "end start"]
-  });
-  
-  const heroY = useTransform(scrollYProgress, [0, 1], [0, 200]);
-  const heroOpacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
-  const dashboardScale = useTransform(scrollYProgress, [0, 0.5], [1, 0.95]);
-  const dashboardY = useTransform(scrollYProgress, [0, 0.5], [0, 50]);
-
   return (
     <div className="min-h-screen">
       {/* HERO */}
-      <section ref={heroRef} className="max-w-6xl mx-auto px-4 md:px-8 pt-24 md:pt-32 pb-16 md:pb-20 relative overflow-hidden">
-        <motion.div style={{ y: heroY, opacity: heroOpacity }}>
+      <section className="max-w-7xl mx-auto px-4 md:px-8 min-h-screen flex items-center overflow-visible">
+        <div className="grid grid-cols-1 lg:grid-cols-[7fr_3fr] gap-8 w-full items-center">
+          <div className="flex flex-col justify-center py-16 lg:py-0">
+            <motion.h1 
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-gray-900 mb-6 leading-tight"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+            >
+              <span className="text-gray-400">From zero to launch,</span><br />I help founders turn <span className="text-gray-900">&ldquo;what if&rdquo;</span> into <span className="text-gray-900">&ldquo;it&apos;s live&rdquo;</span>
+            </motion.h1>
 
+            <motion.p 
+              className="text-sm sm:text-base md:text-lg text-gray-500 max-w-2xl mb-8 md:mb-10 leading-relaxed"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+            >
+              I&apos;ve led 0→1 product design across <span className="text-gray-900 font-medium">healthtech</span>, <span className="text-gray-900 font-medium">analytics</span>, and more, scaling platforms to tens of thousands of global users. I work end-to-end and I&apos;ve shipped alongside founding teams, and I&apos;m comfortable without a playbook. <span className="text-gray-900 font-medium">AI is central to how I work, from research to prototyping</span>, backed by strong expertise in <span className="text-gray-900 font-medium">UX</span>, <span className="text-gray-900 font-medium">interaction design</span>, and <span className="text-gray-900 font-medium">system thinking</span>.
+            </motion.p>
 
-          <motion.h1 
-            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-gray-900 mb-6"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-          >
-<span className="text-gray-400">From zero to launch,</span> I help founders turn <span className="text-gray-900">&ldquo;what if&rdquo;</span> into <span className="text-gray-900">&ldquo;it&apos;s live&rdquo;</span>
-          </motion.h1>
-
-          <motion.p 
-            className="text-sm sm:text-base md:text-lg text-gray-500 max-w-2xl mb-8 md:mb-10 leading-relaxed"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-          >
-            I&apos;ve led 0→1 product design across <span className="text-gray-900 font-medium">healthtech</span>, <span className="text-gray-900 font-medium">analytics</span>, and more, scaling platforms to tens of thousands of global users. I work end-to-end and I&apos;ve shipped alongside founding teams, and I&apos;m comfortable without a playbook. <span className="text-gray-900 font-medium">AI is central to how I work, from research to prototyping</span>, backed by strong expertise in <span className="text-gray-900 font-medium">UX</span>, <span className="text-gray-900 font-medium">interaction design</span>, and <span className="text-gray-900 font-medium">system thinking</span>.
-          </motion.p>
-
-          <motion.div 
-            className="flex flex-col sm:flex-row items-start sm:items-center gap-3 mb-12 md:mb-16"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.5 }}
-          >
-            <Link href="/case-studies">
-              <motion.button 
-                className="px-5 py-2.5 bg-gray-900 text-white text-sm font-medium rounded-lg"
-                whileHover={{ scale: 1.02, y: -2 }}
+            <motion.div 
+              className="flex flex-col sm:flex-row items-start sm:items-center gap-3 mb-12 md:mb-16"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.5 }}
+            >
+              <Link href="/case-studies">
+                <motion.button 
+                  className="px-5 py-2.5 bg-gray-900 text-white text-sm font-medium rounded-lg"
+                  whileHover={{ scale: 1.02, y: -2 }}
+                  whileTap={{ scale: 0.98 }}
+                >
+                  View case studies →
+                </motion.button>
+              </Link>
+              <motion.a 
+                href="/resume.pdf"
+                download="Sakshee Durshettiwar_Resume.pdf"
+                className="px-5 py-2.5 bg-white border border-gray-200 text-gray-600 text-sm rounded-lg flex items-center gap-2"
+                whileHover={{ scale: 1.02, y: -2, borderColor: "#9CA3AF" }}
                 whileTap={{ scale: 0.98 }}
               >
-                View case studies →
-              </motion.button>
-            </Link>
-            <motion.a 
-              href="/resume.pdf"
-              download="Sakshee Durshettiwar_Resume.pdf"
-              className="px-5 py-2.5 bg-white border border-gray-200 text-gray-600 text-sm rounded-lg flex items-center gap-2"
-              whileHover={{ scale: 1.02, y: -2, borderColor: "#9CA3AF" }}
-              whileTap={{ scale: 0.98 }}
-            >
-              Download resume <span className="text-gray-300">↗</span>
-            </motion.a>
+                Download resume <span className="text-gray-300">↗</span>
+              </motion.a>
+            </motion.div>
+          </div>
+
+          {/* Right side - Lanyard */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            className="hidden lg:flex lg:h-screen"
+          >
+            <div className="w-full h-full overflow-visible">
+              <Lanyard position={[0, 0, 30]} gravity={[0, -40, 0]} />
+            </div>
           </motion.div>
-        </motion.div>
+        </div>
       </section>
 
       {/* WORK */}

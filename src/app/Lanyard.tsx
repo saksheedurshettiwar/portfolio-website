@@ -1,8 +1,8 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, Suspense, useLayoutEffect } from "react";
 import { Canvas, extend, useFrame } from "@react-three/fiber";
-import { useGLTF, useTexture, Environment, Lightformer } from "@react-three/drei";
+import { useGLTF, useTexture, Environment, Lightformer, RoundedBox } from "@react-three/drei";
 import {
   BallCollider,
   CuboidCollider,
@@ -23,11 +23,17 @@ export default function Lanyard({
   gravity = [0, -40, 0],
   fov = 20,
   transparent = true,
+  photoSrc = "/Sakshee 1.png",
+  name = "Sakshee",
+  role = "Product Designer",
 }: {
   position?: [number, number, number];
   gravity?: [number, number, number];
   fov?: number;
   transparent?: boolean;
+  photoSrc?: string;
+  name?: string;
+  role?: string;
 }) {
   const [isMobile, setIsMobile] = useState(
     () => typeof window !== "undefined" && window.innerWidth < 768
@@ -40,7 +46,7 @@ export default function Lanyard({
   }, []);
 
   return (
-    <div className="lanyard-wrapper">
+    <div className="lanyard-wrapper" style={{ height: '100vh', width: '100%' }}>
       <Canvas
         camera={{ position: new THREE.Vector3(...position), fov }}
         dpr={[1, isMobile ? 1.5 : 2]}
@@ -50,9 +56,11 @@ export default function Lanyard({
         }
       >
         <ambientLight intensity={Math.PI} />
-        <Physics gravity={gravity as [number, number, number]} timeStep={isMobile ? 1 / 30 : 1 / 60}>
-          <Band isMobile={isMobile} />
-        </Physics>
+        <Suspense fallback={null}>
+          <Physics gravity={gravity as [number, number, number]} timeStep={isMobile ? 1 / 30 : 1 / 60}>
+            <Band isMobile={isMobile} photoSrc={photoSrc} />
+          </Physics>
+        </Suspense>
         <Environment blur={0.75}>
           <Lightformer intensity={2} color="white" position={[0, -1, 5]} rotation={[0, 0, Math.PI / 3]} scale={[100, 0.1, 1]} />
           <Lightformer intensity={3} color="white" position={[-1, -1, 1]} rotation={[0, 0, Math.PI / 3]} scale={[100, 0.1, 1]} />
@@ -64,7 +72,7 @@ export default function Lanyard({
   );
 }
 
-function Band({ isMobile = false }: { isMobile?: boolean }) {
+function Band({ isMobile = false, photoSrc = "/Sakshee 1.png" }: { isMobile?: boolean; photoSrc?: string }) {
   const band = useRef<any>(null);
   const fixed = useRef<any>(null);
   const j1 = useRef<any>(null);
@@ -72,21 +80,22 @@ function Band({ isMobile = false }: { isMobile?: boolean }) {
   const j3 = useRef<any>(null);
   const card = useRef<any>(null);
 
+  const { nodes, materials } = useGLTF("/card.glb") as any;
+  const texture = useTexture(photoSrc);
+  
+  
+
   const vec = new THREE.Vector3();
   const ang = new THREE.Vector3();
   const rot = new THREE.Vector3();
 
   const segmentProps: any = {
     type: "dynamic",
-    canSleep: true,
+    canSleep: false,
     colliders: false,
-    angularDamping: 4,
-    linearDamping: 4,
+    angularDamping: 8,
+    linearDamping: 8,
   };
-
-  // Load GLB and texture from public folder
-  const { nodes, materials } = useGLTF("/card.glb") as any;
-  const texture = useTexture("/lanyard.png");
   
   const [curve] = useState(
     () => new THREE.CatmullRomCurve3([new THREE.Vector3(), new THREE.Vector3(), new THREE.Vector3(), new THREE.Vector3()])
@@ -97,7 +106,7 @@ function Band({ isMobile = false }: { isMobile?: boolean }) {
   useRopeJoint(fixed, j1, [[0, 0, 0], [0, 0, 0], 1]);
   useRopeJoint(j1, j2, [[0, 0, 0], [0, 0, 0], 1]);
   useRopeJoint(j2, j3, [[0, 0, 0], [0, 0, 0], 1]);
-  useSphericalJoint(j3, card, [[0, 0, 0], [0, 1.45, 0]]);
+  useSphericalJoint(j3, card, [[0, 0, 0], [0, 1.2, 0]]);
 
   useEffect(() => {
     if (hovered) {
@@ -131,31 +140,36 @@ function Band({ isMobile = false }: { isMobile?: boolean }) {
     }
   });
 
-  texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
+  
+
+  const photoScale = 0.6;
+  const scale = 4;
 
   return (
     <>
-      <group position={[0, 4, 0]}>
+      <group position={[0, 5, 0]}>
         <RigidBody ref={fixed} {...segmentProps} type="fixed" />
         <RigidBody position={[0.5, 0, 0]} ref={j1} {...segmentProps} type="dynamic"><BallCollider args={[0.1]} /></RigidBody>
         <RigidBody position={[1, 0, 0]} ref={j2} {...segmentProps} type="dynamic"><BallCollider args={[0.1]} /></RigidBody>
         <RigidBody position={[1.5, 0, 0]} ref={j3} {...segmentProps} type="dynamic"><BallCollider args={[0.1]} /></RigidBody>
         <RigidBody position={[2, 0, 0]} ref={card} {...segmentProps} type={dragged ? "kinematicPosition" : "dynamic"}>
           <CuboidCollider args={[0.8, 1.125, 0.01]} />
-          <group scale={2.25} position={[0, -1.2, -0.05]} onPointerOver={() => hover(true)} onPointerOut={() => hover(false)}
+          <group scale={scale} position={[0, -1.5, -0.05]} onPointerOver={() => hover(true)} onPointerOut={() => hover(false)}
             onPointerUp={(e: any) => { e.target.releasePointerCapture(e.pointerId); drag(false); }}
             onPointerDown={(e: any) => { e.target.setPointerCapture(e.pointerId); drag(new THREE.Vector3().copy(e.point).sub(vec.clone().copy(card.current.translation()))); }}>
-            <mesh geometry={nodes.card.geometry}>
-              <meshPhysicalMaterial map={materials.base.map} map-anisotropy={16} clearcoat={isMobile ? 0 : 1} clearcoatRoughness={0.15} roughness={0.9} metalness={0.8} />
-            </mesh>
-            <mesh geometry={nodes.clip.geometry} material={materials.metal} material-roughness={0.3} />
-            <mesh geometry={nodes.clamp.geometry} material={materials.metal} />
+            {/* Your photo replacing the card - raw texture */}
+            <RoundedBox args={[0.8, 1.1, 0.01]} radius={0.04} smoothness={4}>
+              <meshBasicMaterial map={texture} />
+            </RoundedBox>
+            {/* Clip at top of photo */}
+            <mesh geometry={nodes.clip.geometry} position={[0, -0.5, 0]} material={materials.metal} material-roughness={0.3} />
+            <mesh geometry={nodes.clamp.geometry} position={[0, -0.5, 0]} material={materials.metal} />
           </group>
         </RigidBody>
       </group>
       <mesh ref={band}>
         <meshLineGeometry />
-        <meshLineMaterial color="white" depthTest={false} resolution={isMobile ? [1000, 2000] : [1000, 1000]} useMap map={texture} repeat={[-4, 1]} lineWidth={1} />
+        <meshLineMaterial color="#333333" depthTest={false} resolution={isMobile ? [1000, 2000] : [1000, 1000]} repeat={[-4, 1]} lineWidth={2.5} opacity={0.95} transparent />
       </mesh>
     </>
   );
