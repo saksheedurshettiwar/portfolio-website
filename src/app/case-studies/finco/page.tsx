@@ -117,35 +117,16 @@ export default function FincoCaseStudy() {
           </p>
         </AnimatedSection>
         
-        {/* Scrolling Cover Images */}
+        {/* Hero Image */}
         <AnimatedSection delay={0.4}>
-          <div className="relative w-[100vw] left-1/2 right-1/2 -translate-x-1/2 mb-16 overflow-hidden">
-            <motion.div 
-              className="flex gap-4"
-              animate={{
-                x: [0, -2400],
-              }}
-              transition={{
-                x: {
-                  repeat: Infinity,
-                  repeatType: "loop",
-                  duration: 15,
-                  ease: "linear",
-                },
-              }}
-            >
-              {[1, 2, 3, 4, 1, 2, 3, 4].map((i, idx) => (
-                <div key={idx} className="flex-shrink-0 w-[400px] md:w-[600px]">
-                  <Image 
-                    src={`/case-studies/accessiq/0${i}.png`} 
-                    alt={`AccessIQ Dashboard ${i}`}
-                    width={600}
-                    height={340}
-                    className="w-full h-auto rounded-xl"
-                  />
-                </div>
-              ))}
-            </motion.div>
+          <div className="w-full mb-16 rounded-xl overflow-hidden">
+            <Image 
+              src="/Finco Cover.png" 
+              alt="Finco Dashboard"
+              width={1200}
+              height={600}
+              className="w-full h-auto object-top rounded-xl"
+            />
           </div>
         </AnimatedSection>
         
