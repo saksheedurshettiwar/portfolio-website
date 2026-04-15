@@ -616,10 +616,10 @@ export default function AccessIQCaseStudy() {
               </motion.span>
             </Link>
             <Link 
-              href="/case-studies/hivel"
+              href="/case-studies/finco"
               className="text-sm text-gray-900 hover:text-gray-600 font-medium transition-colors flex items-center gap-2 group"
             >
-              Next Project: Hivel
+              Next Project: Finco
               <motion.span 
                 className="transition-transform group-hover:translate-x-1"
                 whileHover={{ x: 4 }}
