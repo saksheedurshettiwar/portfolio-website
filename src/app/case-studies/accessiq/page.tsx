@@ -208,7 +208,7 @@ export default function AccessIQCaseStudy() {
         </AnimatedSection>
         
         <motion.div 
-          className="bg-gray-900 -mx-4 md:-mx-8 lg:-mx-16 px-4 md:px-8 py-12 rounded-xl mb-16 relative overflow-hidden"
+          className="bg-gray-900 p-8 md:p-12 rounded-2xl mb-16 relative overflow-hidden"
           whileHover={{ scale: 1.01 }}
           transition={{ duration: 0.3 }}
         >
