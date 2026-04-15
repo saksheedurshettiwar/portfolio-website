@@ -234,10 +234,10 @@ export default function Home() {
       {/* WORK */}
       <section className="max-w-6xl mx-auto px-4 md:px-8 py-16 md:pt-24 pb-16 md:pb-24">
         <AnimatedSection>
-          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-6">
-            <span className="inline-flex items-center gap-1.5 text-[11px] font-medium text-gray-400 border border-gray-200 px-3 py-1 rounded-full">
-              Case Studies
-            </span>
+          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-12">
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-900">
+              Here's what I've been making
+            </h2>
             <Link href="/case-studies">
               <motion.button 
                 className="px-4 py-1.5 bg-white border border-gray-200 text-gray-400 text-sm rounded-lg hover:border-gray-300 transition-colors"

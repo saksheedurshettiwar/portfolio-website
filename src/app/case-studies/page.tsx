@@ -56,7 +56,7 @@ export default function CaseStudies() {
             <span>←</span> Back
           </button>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-gray-900 mb-6">
-            Case Studies
+            Here's what I've been making
           </h1>
           <p className="text-base text-gray-500 max-w-2xl leading-relaxed mb-12">
             Every project starts with a question worth answering
