@@ -5,7 +5,6 @@ import { useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import Folder from "@/components/Folder";
 
 function AnimatedSection({ children, className = "", delay = 0 }: { children: React.ReactNode; className?: string; delay?: number }) {
   const ref = useRef(null);
@@ -60,39 +59,39 @@ export default function About() {
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-gray-900 mb-6">
             About
           </h1>
-          <p className="text-base md:text-lg text-gray-500 max-w-2xl leading-relaxed mb-12">
-            I think in systems. I design for people.
+          <p className="text-base md:text-lg text-gray-500 max-w-6xl leading-relaxed mb-12 text-justify">
+            I turn messy, complex problems into products people can actually use.
           </p>
         </AnimatedSection>
         
         <AnimatedSection delay={0.1}>
-          <p className="text-base md:text-lg text-gray-500 leading-relaxed max-w-4xl">
-            I began my journey in engineering, like many who set out to discover what truly excites them. My degree says textile technologist, but my heart has always belonged to creativity — sketching people, capturing details, and turning ideas into something meaningful. That curiosity slowly led me toward the world of design.
+          <p className="text-base md:text-lg text-gray-500 leading-relaxed max-w-6xl text-justify">
+            I'm a product designer with 5+ years of experience working across B2B SaaS, enterprise software, and healthcare. My background started in engineering, which means I think about systems, constraints, and edge cases as naturally as I think about interfaces.
           </p>
         </AnimatedSection>
         
         <AnimatedSection delay={0.2}>
-          <p className="text-base md:text-lg text-gray-500 leading-relaxed max-w-4xl mt-8">
-            What started as a hobby became a purpose. I grew fascinated by how digital products shape how we interact, learn, and live. I taught myself design, explored tools like Figma, and built my foundation on UX / UI and product thinking. Over time, I learned that great design sits at the intersection of empathy, logic, and simplicity.
+          <p className="text-base md:text-lg text-gray-500 leading-relaxed max-w-6xl mt-8 text-justify">
+            Over the years I've worked on products where the stakes were real: clinical workflows, financial decision-making, enterprise tooling used by teams who can't afford confusion. That exposure changed how I design. I don't lead with aesthetics. I lead with understanding.
           </p>
         </AnimatedSection>
         
         <AnimatedSection delay={0.3}>
-          <p className="text-base md:text-lg text-gray-500 leading-relaxed max-w-4xl mt-8">
-            Today, I work with clients across India and abroad — helping startups and brands craft purposeful, conversion-driven, and visually consistent experiences. I love building things that look good, work well, and make sense.
+          <p className="text-base md:text-lg text-gray-500 leading-relaxed max-w-6xl mt-8 text-justify">
+            My process is deliberate. I spend more time in the problem than most people expect, because I've seen what happens when teams skip that part. I think in flows before frames, systems before screens, and I push back when a brief doesn't hold up.
           </p>
         </AnimatedSection>
         
         <AnimatedSection delay={0.4}>
-          <p className="text-base md:text-lg text-gray-500 leading-relaxed max-w-4xl mt-8">
-            Beyond work, I&apos;m a traveler at heart. Exploring new places gives me fresh perspectives and endless inspiration. I also write blogs about design and creativity — a space where I reflect, share, and connect ideas that go beyond the screen.
+          <p className="text-base md:text-lg text-gray-500 leading-relaxed max-w-6xl mt-8 text-justify">
+            I'm at my best in cross-functional teams, working closely with product and engineering from day one, not handing off at the end. The work is better for it, and so are the relationships.
           </p>
         </AnimatedSection>
         
         <AnimatedSection delay={0.5}>
-          <div className="flex items-center gap-4 mt-8">
+          <div className="flex items-center gap-4 mt-12 max-w-6xl">
             <div className="w-[3px] h-12 bg-gray-900 rounded-full"></div>
-            <p className="text-base md:text-lg text-gray-900 leading-relaxed max-w-4xl font-medium">
+            <p className="text-base md:text-lg text-gray-900 leading-relaxed font-medium text-justify">
               I see design as a quiet conversation between intent and imagination, one that never really ends, it just evolves.
             </p>
           </div>
@@ -155,9 +154,9 @@ export default function About() {
                         fontFamily="system-ui, sans-serif"
                         letterSpacing="3"
                       >
-                        <textPath href="#circlePath" startOffset="0%">
-                          AI FIRST • PRODUCT DESIGNER •
-                        </textPath>
+                          <textPath href="#circlePath" startOffset="0%">
+                            AI FIRST • PRODUCT DESIGNER • B2B SAAS •
+                          </textPath>
                       </text>
                     </svg>
                   </motion.div>
@@ -246,45 +245,39 @@ export default function About() {
           <span className="inline-flex items-center gap-1.5 text-[11px] font-medium text-gray-400 border border-gray-200 px-3 py-1 rounded-full mb-6">
             Design Values
           </span>
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2 max-w-6xl">
             My guiding stars as a designer
           </h2>
-          <p className="text-base text-gray-500 mb-12 max-w-2xl">
-            No matter the project, I lean on these values to stay grounded so the work stays thoughtful, practical, and easy for people to use.
+          <p className="text-base text-gray-500 mb-12 max-w-6xl">
+            These aren't rules I follow. They're how I show up for every project, every team, every problem.
           </p>
-          
-          <div className="flex flex-col items-center">
-            <motion.div
-              style={{ height: "400px", position: "relative" }}
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-            >
-              <Folder size={3} color="#6366F1" />
-            </motion.div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
               {[
-                { title: "User-first, always", description: "Every decision starts with understanding the person who'll actually use it. If it doesn't serve them, it doesn't ship." },
-                { title: "Ship and iterate", description: "Done beats perfect. I get something real in front of people, then refine based on what actually works." },
-                { title: "Systems over screens", description: "Design isn't just pixels, it's how things work. I think in patterns, not just pages." },
-                { title: "Clear over clever", description: "The best design is invisible. If someone needs a tutorial, I've already failed." },
-                { title: "Data-informed", description: "I back decisions with research and logic. Guesswork is where good design goes to die." },
-                { title: "Collaborative", description: "The best work happens when design, eng, and product work as one team, not handoffs." },
+                { title: "I clarify before I create", description: "I don't design until the problem is sharp. Vague briefs make expensive mistakes." },
+                { title: "I design for the system, not the screen", description: "Every component fits into something bigger. I think in patterns, not one-off pages." },
+                { title: "I own my decisions", description: "Every choice comes with a reason. You'll always know why, not just what." },
+                { title: "I flag problems early", description: "I don't save issues for the final review. Problems raised late cost everyone time." },
+                { title: "I work with the team, not ahead of it", description: "Eng and product are in the loop from day one. No surprises, no handoff friction." },
+                { title: "I let evidence lead", description: "I back decisions with research and data. Gut feel is a starting point, not a conclusion." },
               ].map((value, i) => (
-                <AnimatedSection key={value.title} delay={i * 0.1}>
-                  <motion.div 
-                    className="bg-white border border-gray-200 rounded-xl p-6 hover:border-gray-300 transition-all h-full group cursor-pointer"
-                    whileHover={{ y: -4 }}
-                  >
-                    <h3 className="text-base font-semibold text-gray-900 mb-3">{value.title}</h3>
-                    <p className="text-sm text-gray-500 leading-relaxed">{value.description}</p>
-                  </motion.div>
-                </AnimatedSection>
+                <motion.div 
+                  key={value.title}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.08 }}
+                  className="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-md hover:border-gray-300 transition-all cursor-pointer"
+                >
+                  <svg className="w-6 h-6 mb-4 text-gray-600" viewBox="0 0 100 100" fill="currentColor">
+                    <path d="M50 5 C55 35, 85 45, 95 50 C85 55, 55 65, 50 95 C45 65, 15 55, 5 50 C15 45, 45 35, 50 5 Z" />
+                    <circle cx="75" cy="20" r="6" />
+                  </svg>
+                  <h3 className="text-base font-semibold text-gray-900 mb-2">{value.title}</h3>
+                  <p className="text-sm text-gray-500 leading-relaxed">{value.description}</p>
+                </motion.div>
               ))}
             </div>
-          </div>
         </AnimatedSection>
       </section>
     </div>

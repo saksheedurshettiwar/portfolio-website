@@ -19,7 +19,7 @@ const projects = [
   },
   {
     tag: "Fintech · AI · B2C",
-    title: "FinCo — Smart Remittance",
+    title: "Finco — Smart Remittance",
     description:
       "AI Rate Forecasting for Smarter Transfer Timing. Transparent Recommendations & Smart Routing for Better Value.",
     metric: "Coming soon",
@@ -203,8 +203,8 @@ export default function Home() {
                 </motion.button>
               </Link>
               <motion.a 
-                href="/resume.pdf"
-                download="Sakshee Durshettiwar_Resume.pdf"
+                href="/Sakshee Durshettiwar_Resume_Product Designer_B2B SaaS.pdf"
+                download="Sakshee Durshettiwar_Resume_Product Designer_B2B SaaS.pdf"
                 className="px-5 py-2.5 bg-white border border-gray-200 text-gray-600 text-sm rounded-lg flex items-center gap-2"
                 whileHover={{ scale: 1.02, y: -2, borderColor: "#9CA3AF" }}
                 whileTap={{ scale: 0.98 }}
@@ -295,7 +295,7 @@ export default function Home() {
                             <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
                               <span className="text-white text-xs font-bold">$</span>
                             </div>
-                            <span className="text-white/80 text-xs">FinCo</span>
+                            <span className="text-white/80 text-xs">Finco</span>
                           </div>
                           <div className="flex gap-1">
                             <div className="w-6 h-6 bg-green-400/80 rounded"></div>

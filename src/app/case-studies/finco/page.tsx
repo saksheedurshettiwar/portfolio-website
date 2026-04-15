@@ -40,7 +40,7 @@ function FadeInOnScroll({ children, className = "" }: { children: React.ReactNod
   );
 }
 
-export default function FinCoCaseStudy() {
+export default function FincoCaseStudy() {
   const router = useRouter();
   const containerRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll();
@@ -53,6 +53,7 @@ export default function FinCoCaseStudy() {
       decision: "Most financial tools show predictions as data. I showed them as decisions. The difference is giving someone directions instead of handing them a map.",
       insight: "The insight was to transform raw data into actionable recommendations that users could immediately act upon.",
       insightLabel: "Design Insight",
+      image: "/case-studies/accessiq/Manager Dashboard.png",
     },
     {
       title: "Stop picking blindly. See exactly why we recommend each provider",
@@ -61,6 +62,7 @@ export default function FinCoCaseStudy() {
       decision: "AI confidence is worthless without AI reasoning. Every recommendation shows its working so users can agree or override with full information.",
       insight: "When users understand why a recommendation is made, they trust it more and act faster.",
       insightLabel: "AI Powered",
+      image: "/case-studies/accessiq/AI Recommendation/01.png",
     },
     {
       title: "Split your transfer. Get more to the other side",
@@ -69,6 +71,7 @@ export default function FinCoCaseStudy() {
       decision: "Smart routing is only triggered when savings exceed ₹150. Below that threshold, the added complexity is not worth it for users. The flow is step-by-step and one-click confirmable.",
       insight: "Complexity should only appear when it adds clear value to the user's decision.",
       insightLabel: "Design Decision",
+      image: "/case-studies/accessiq/Conflict Detection.png",
     },
   ];
 
@@ -104,36 +107,94 @@ export default function FinCoCaseStudy() {
         
         <AnimatedSection delay={0.2}>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-gray-900 mb-6 leading-tight">
-            Designing Smarter Remittance Decisions<br />That Made Users 25% Faster
+            Designing Smarter Remittance Decisions That Made Users 25% Faster and 30% More Confident
           </h1>
         </AnimatedSection>
         
         <AnimatedSection delay={0.3}>
           <p className="text-xl text-gray-500 leading-relaxed mb-12 max-w-3xl">
-            FinCo is an end-to-end AI-powered remittance tool designed to help users make confident transfer decisions, faster.
+            Finco is an end-to-end AI-powered remittance tool designed to help users make confident transfer decisions, faster.
           </p>
         </AnimatedSection>
         
-        {/* Metrics Strip */}
-        <div className="bg-gray-900 -mx-4 md:-mx-8 lg:-mx-16 px-4 md:px-8 py-12 rounded-xl mb-16">
-          <FadeInOnScroll>
-            <h2 className="text-2xl font-bold text-white mb-8 text-center">What success looks like</h2>
-          </FadeInOnScroll>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-16 text-center text-white max-w-4xl mx-auto">
-            <div>
-              <p className="text-4xl md:text-5xl font-bold mb-2">30%</p>
-              <p className="text-sm text-gray-400">increase in user confidence picking the right provider and timing</p>
-            </div>
-            <div>
-              <p className="text-4xl md:text-5xl font-bold mb-2">25%</p>
-              <p className="text-sm text-gray-400">faster from comparison to confirmed transfer</p>
-            </div>
-            <div>
-              <p className="text-4xl md:text-5xl font-bold mb-2">15%</p>
-              <p className="text-sm text-gray-400">drop in abandonment during the transfer flow</p>
-            </div>
+        {/* Scrolling Cover Images */}
+        <AnimatedSection delay={0.4}>
+          <div className="relative w-[100vw] left-1/2 right-1/2 -translate-x-1/2 mb-16 overflow-hidden">
+            <motion.div 
+              className="flex gap-4"
+              animate={{
+                x: [0, -2400],
+              }}
+              transition={{
+                x: {
+                  repeat: Infinity,
+                  repeatType: "loop",
+                  duration: 15,
+                  ease: "linear",
+                },
+              }}
+            >
+              {[1, 2, 3, 4, 1, 2, 3, 4].map((i, idx) => (
+                <div key={idx} className="flex-shrink-0 w-[400px] md:w-[600px]">
+                  <Image 
+                    src={`/case-studies/accessiq/0${i}.png`} 
+                    alt={`AccessIQ Dashboard ${i}`}
+                    width={600}
+                    height={340}
+                    className="w-full h-auto rounded-xl"
+                  />
+                </div>
+              ))}
+            </motion.div>
           </div>
-        </div>
+        </AnimatedSection>
+        
+        {/* Metrics Strip */}
+        <motion.div 
+          className="bg-gray-900 -mx-4 md:-mx-8 lg:-mx-16 px-4 md:px-8 py-12 rounded-xl mb-16 relative overflow-hidden"
+          whileHover={{ scale: 1.01 }}
+          transition={{ duration: 0.3 }}
+        >
+          <motion.div 
+            className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent"
+            animate={{ x: ['-100%', '100%'] }}
+            transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
+          />
+          <h2 className="text-2xl font-bold text-white mb-8 text-center relative z-10">What success looks like</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-16 text-center text-white max-w-4xl mx-auto relative z-10">
+            {[
+              { num: "30%", text: "increase in user confidence picking the right provider and timing" },
+              { num: "25%", text: "faster from comparison to confirmed transfer" },
+              { num: "15%", text: "drop in abandonment during the transfer flow" },
+            ].map((item, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.15, duration: 0.5 }}
+                whileHover={{ scale: 1.05, y: -4 }}
+                className="cursor-default"
+              >
+                <motion.p 
+                  className="text-4xl md:text-5xl font-bold mb-2"
+                  animate={{ 
+                    scale: [1, 1.02, 1],
+                  }}
+                  transition={{ 
+                    duration: 3,
+                    repeat: Infinity,
+                    repeatDelay: 2,
+                    ease: "easeInOut"
+                  }}
+                >
+                  {item.num}
+                </motion.p>
+                <p className="text-sm text-gray-400">{item.text}</p>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
         
         {/* The Core Problems */}
         <AnimatedSection>
@@ -216,20 +277,19 @@ export default function FinCoCaseStudy() {
                     </div>
                     
                     {/* Mock Image - Full Width */}
-                    <div className="mb-6 overflow-hidden rounded-xl border border-gray-200">
-                      <motion.div
-                        whileHover={{ scale: 1.01 }}
-                        transition={{ duration: 0.3 }}
-                      >
-                        <Image 
-                          src="/case-studies/finco/placeholder.png" 
-                          alt={screen.title} 
-                          width={1200} 
-                          height={675} 
-                          className="w-full h-auto" 
-                        />
-                      </motion.div>
-                    </div>
+                    <motion.div
+                      whileHover={{ scale: 1.01 }}
+                      transition={{ duration: 0.3 }}
+                      className="mb-6 overflow-hidden rounded-xl border border-gray-200"
+                    >
+                      <Image 
+                        src={screen.image} 
+                        alt={screen.title} 
+                        width={1200} 
+                        height={675} 
+                        className="w-full h-auto" 
+                      />
+                    </motion.div>
                     
                     {/* Research Insight */}
                     <div className="border-l-4 border-gray-900 pl-5 py-3">
@@ -275,7 +335,7 @@ export default function FinCoCaseStudy() {
                   <span className="text-2xl">🤖</span>
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-white">FinCo AI Assistant (Cofin)</h3>
+                  <h3 className="text-xl font-semibold text-white">Finco AI Assistant (Cofin)</h3>
                   <p className="text-sm text-gray-400">The smartest way to send money abroad</p>
                 </div>
               </div>

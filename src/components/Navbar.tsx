@@ -46,8 +46,8 @@ export default function Navbar() {
           </button>
         </Link>
         <a
-          href="/resume.pdf"
-          download="Sakshee Durshettiwar_Resume.pdf"
+          href="/Sakshee Durshettiwar_Resume_Product Designer_B2B SaaS.pdf"
+          download="Sakshee Durshettiwar_Resume_Product Designer_B2B SaaS.pdf"
           className="px-3 py-1.5 text-[13px] text-gray-400 hover:bg-gray-100 rounded-md transition-colors"
         >
           Resume ↗
@@ -111,7 +111,7 @@ export default function Navbar() {
                   Experiments
                 </button>
               </Link>
-              <a href="/resume.pdf" download="Sakshee Durshettiwar_Resume.pdf" className="px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md">
+              <a href="/Sakshee Durshettiwar_Resume_Product Designer_B2B SaaS.pdf" download="Sakshee Durshettiwar_Resume_Product Designer_B2B SaaS.pdf" className="px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded-md">
                 Resume ↗
               </a>
               <a 
