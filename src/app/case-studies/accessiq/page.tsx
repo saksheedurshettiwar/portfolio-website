@@ -70,8 +70,8 @@ export default function AccessIQCaseStudy() {
   
   const metrics = [
     { num: "67%", text: "reduction in stale access to cardholder data after first quarterly review cycle." },
-    { num: "4X", text: "faster onboarding for new hires — from 5-day access chaos to same-day provisioning" },
-    { num: "100%", text: "audit evidence coverage with zero manual spreadsheet exports — for the first time" },
+{ num: "4X", text: "faster onboarding for new hires: from 5-day access chaos to same-day provisioning" },
+              { num: "100%", text: "audit evidence coverage with zero manual spreadsheet exports: for the first time" },
   ];
 
   const screens = [
@@ -81,7 +81,7 @@ export default function AccessIQCaseStudy() {
       decision: "Most tools answer \"how bad is it?\" This one answers \"what do I do right now?\" Five KPIs replace the Slack messages, emails, and spreadsheet tabs managers were juggling every morning.",
       insight: "91% of managers had no consolidated view of their team's access health. The KPIs weren't pulled from a compliance checklist, they came from what managers were already trying to track themselves.",
       insightLabel: "Research insight",
-      image: "/case-studies/accessiq/Manager Dashboard.png",
+      image: "/case-studies/AccessIQ/Manager Dashboard/Manager Dashboard.png",
     },
     {
       title: "Conflict Detection",
@@ -89,15 +89,15 @@ export default function AccessIQCaseStudy() {
       decision: "The consequence of approving comes before the buttons. Always. Showing the real-world risk in plain English, not just a colour, is what makes managers actually stop and think.",
       insight: "Managers approved conflicts in other tools because warnings were visual noise with no meaning. Replacing the red badge with a one-line consequence was the change that turned ignored alerts into actual decisions.",
       insightLabel: "Research insight",
-      image: "/case-studies/accessiq/Conflict Detection.png",
+      image: "/case-studies/AccessIQ/Conflict Detection/Conflict Detection.png",
     },
     {
-      title: "Triage Queue",
+      title: "Approvals Queue",
       problem: "80–120 requests a month, shown as a flat list. Everything looked equally urgent, so managers rubber-stamped the rest just to clear their inbox.",
       decision: "The queue is triaged before the manager sees it. Four numbers tell the shape of the work upfront: what needs judgment, what AI handles, what's blocked.",
       insight: "Approval fatigue is the leading cause of over-provisioning in high-volume IAM environments. When everything looks the same priority, risky requests slip through alongside routine ones.",
       insightLabel: "Research insight",
-      image: "/case-studies/accessiq/Triage Queue.png",
+      image: "/case-studies/AccessIQ/Approvals Queue/Approvals Queue.png",
     },
     {
       title: "AI Recommendation",
@@ -105,7 +105,7 @@ export default function AccessIQCaseStudy() {
       decision: "The AI recommendation leads at 97% confidence, in plain English, before any buttons appear. Managers confirm a recommendation, they don't interpret raw data.",
       insight: "Adding the confidence score and plain-English reasoning was the single change that lifted AI suggestion adoption from 22% to 61% in testing.",
       insightLabel: "Research insight",
-      images: ["/case-studies/accessiq/AI Recommendation/01.png", "/case-studies/accessiq/AI Recommendation/02.png"],
+      images: ["/case-studies/AccessIQ/AI Recommendation/01.png", "/case-studies/AccessIQ/AI Recommendation/02.png"],
     },
     {
       title: "Access Catalogue",
@@ -113,23 +113,23 @@ export default function AccessIQCaseStudy() {
       decision: "One place. Every tool described in plain English: what you can do, what you can't, and how many peers in your role already have it.",
       insight: "Showing peer data directly reduced over-broad requests. When employees saw colleagues only had read-only access, they stopped asking for admin, cutting review volume downstream.",
       insightLabel: "Research insight",
-      image: "/case-studies/accessiq/The tools you need.png",
+      image: "/case-studies/AccessIQ/Access Catalogue/Access Catalogue.png",
     },
     {
-      title: "One Click to Request",
+      title: "Extend Access",
       problem: "Employees had no self-service way to manage access. Everything went through the manager via Slack, and expired access was only discovered when they got locked out.",
       decision: "Two decisions only: how long, and why. Current access is shown upfront so employees know what they already have before submitting a new request.",
       insight: "The expiry warning inside the modal let employees extend access in under 60 seconds, eliminating the emergency Slack messages managers got every time someone was locked out.",
       insightLabel: "Research insight",
-      images: ["/case-studies/accessiq/One click to request/01.png", "/case-studies/accessiq/One click to request/02.png"],
+      images: ["/case-studies/AccessIQ/Extend Access/01.png", "/case-studies/AccessIQ/Extend Access/02.png"],
     },
     {
-      title: "No Slack message. No guessing. Just two questions.",
+      title: "Request Access",
       problem: "Requesting access meant messaging your manager, waiting, explaining, and hoping they approved the right thing. No standard process, no record, no way to track it.",
       decision: "Two questions. What you'll get is shown before you ask, no surprises post-approval. The justification field creates the audit trail automatically, no separate process needed.",
       insight: "The \"Why do you need this?\" field turns a rubber-stamp approval into a documented decision. When managers see the reason, they make better calls. When auditors ask, the answer is already there.",
       insightLabel: "Research insight",
-      images: ["/case-studies/accessiq/No Slack message. No guessing. Just two questions/01.png", "/case-studies/accessiq/No Slack message. No guessing. Just two questions/02.png"],
+      images: ["/case-studies/AccessIQ/Request Access/01.png", "/case-studies/AccessIQ/Request Access/02.png"],
     },
   ];
 
@@ -195,7 +195,7 @@ export default function AccessIQCaseStudy() {
               {[1, 2, 3, 4, 1, 2, 3, 4].map((i, idx) => (
                 <div key={idx} className="flex-shrink-0 w-[400px] md:w-[600px]">
                   <Image 
-                    src={`/case-studies/accessiq/cover img/0${i}.png`} 
+                    src={`/case-studies/AccessIQ/Hero Section/0${i}.png`} 
                     alt={`AccessIQ Dashboard ${i}`}
                     width={600}
                     height={340}
@@ -221,8 +221,8 @@ export default function AccessIQCaseStudy() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-16 text-center text-white max-w-4xl mx-auto relative z-10">
             {[
               { num: "67%", text: "reduction in stale access to cardholder data after first quarterly review cycle." },
-              { num: "4X faster", text: "onboarding for new hires — from 5-day access chaos to same-day provisioning" },
-              { num: "100%", text: "audit evidence coverage with zero manual spreadsheet exports — for the first time" },
+              { num: "4X faster", text: "onboarding for new hires: from 5-day access chaos to same-day provisioning" },
+              { num: "100%", text: "audit evidence coverage with zero manual spreadsheet exports: for the first time" },
             ].map((item, i) => (
               <motion.div
                 key={i}
@@ -561,7 +561,7 @@ export default function AccessIQCaseStudy() {
                             key={imgIdx}
                             whileHover={{ scale: 1.01 }}
                             transition={{ duration: 0.3 }}
-                            className="overflow-hidden rounded-xl border border-gray-200"
+                            className="overflow-hidden rounded-lg border border-gray-200 bg-white"
                           >
                             <Image 
                               src={img} 

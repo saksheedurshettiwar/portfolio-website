@@ -79,7 +79,7 @@ export default function CaseStudies() {
                   {index === 0 && (
                     <div className="w-full h-full">
                       <Image 
-                        src="/case-studies/accessiq/Manager Dashboard.png" 
+                        src="/case-studies/AccessIQ/Manager Dashboard/Manager Dashboard.png" 
                         alt="AccessIQ"
                         width={240}
                         height={140}
